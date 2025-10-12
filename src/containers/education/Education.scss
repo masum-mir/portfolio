@@ -1,0 +1,650 @@
+@import "../../globalColor";
+
+// Main Container
+.education-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, $bg-light 0%, #f0f9ff 50%, #fef3e2 100%);
+  padding: 6rem 0 4rem;
+
+  @media (max-width: 768px) {
+    padding: 5rem 0 3rem;
+  }
+}
+
+.education-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
+}
+
+// Hero Section
+.education-hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 0 6rem;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 2rem 0 4rem;
+  }
+
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+
+    .hero-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.1;
+
+      &.circle-1 {
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(135deg, $primary-color, $secondary-color);
+        top: -100px;
+        right: -100px;
+        animation: float 20s infinite ease-in-out;
+      }
+
+      &.circle-2 {
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(135deg, $secondary-color, $primary-color);
+        bottom: -50px;
+        left: -50px;
+        animation: float 25s infinite ease-in-out reverse;
+      }
+
+      &.circle-3 {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(135deg, $success-color, $secondary-color);
+        top: 50%;
+        left: 50%;
+        animation: float 15s infinite ease-in-out;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .hero-badge {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+    background: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba($primary-color, 0.3);
+    animation: pulse 3s infinite;
+
+    .badge-icon {
+      width: 40px;
+      height: 40px;
+      color: $bg-white;
+    }
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    color: $text-dark;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    color: $text-medium;
+    max-width: 600px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Timeline Section
+.education-timeline {
+  position: relative;
+  margin-bottom: 5rem;
+
+  .timeline-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+
+    .timeline-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $text-dark;
+      margin-bottom: 1rem;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    .timeline-line {
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(
+        90deg,
+        $primary-color 0%,
+        $secondary-color 100%
+      );
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+  }
+}
+
+.timeline-content {
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  animation: slideInLeft 0.8s ease-out both;
+
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Timeline Dot
+.timeline-dot-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  padding-top: 0.5rem;
+
+  .timeline-dot {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba($primary-color, 0.3);
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+      width: 50px;
+      height: 50px;
+    }
+
+    .dot-inner {
+      width: 30px;
+      height: 30px;
+      background: $bg-white;
+      border-radius: 50%;
+
+      @media (max-width: 768px) {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .timeline-connector {
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    width: 3px;
+    height: calc(100% + 3rem);
+    background: linear-gradient(
+      180deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+    opacity: 0.3;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      top: 50px;
+    }
+  }
+}
+
+// Degree Card
+.degree-card {
+  flex: 1;
+  background: $bg-white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba($primary-color, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba($secondary-color, 0.3);
+  }
+
+  .card-header {
+    display: flex;
+    gap: 1.5rem;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
+  }
+
+  .card-logo-section {
+    flex-shrink: 0;
+
+    .logo-container {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(
+        135deg,
+        rgba($primary-color, 0.05) 0%,
+        rgba($secondary-color, 0.05) 100%
+      );
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      border: 2px solid rgba($primary-color, 0.1);
+
+      @media (max-width: 768px) {
+        width: 80px;
+        height: 80px;
+      }
+
+      .logo-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .card-main {
+    flex: 1;
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
+  }
+
+  .degree-info {
+    .degree-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $text-dark;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+
+      @media (max-width: 768px) {
+        font-size: 1.25rem;
+      }
+    }
+
+    .institution-name {
+      font-size: 1.125rem;
+      color: $text-medium;
+      font-weight: 500;
+      margin: 0;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .duration-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(
+      135deg,
+      rgba($secondary-color, 0.1) 0%,
+      rgba($secondary-color, 0.05) 100%
+    );
+    border-radius: 50px;
+    border: 1px solid rgba($secondary-color, 0.2);
+    white-space: nowrap;
+
+    .clock-icon {
+      width: 18px;
+      height: 18px;
+      color: $secondary-color;
+    }
+
+    span {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: $secondary-color;
+    }
+  }
+}
+
+// Description List
+.description-list {
+  list-style: none;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  .description-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: $text-medium;
+    line-height: 1.6;
+
+    .check-icon {
+      width: 20px;
+      height: 20px;
+      color: $success-color;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+  }
+}
+
+// Website Link
+.website-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, $primary-color 0%, #1e3a5f 100%);
+  color: $bg-white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba($primary-color, 0.3);
+
+  .arrow-icon {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba($primary-color, 0.4);
+
+    .arrow-icon {
+      transform: translateX(4px);
+    }
+  }
+}
+
+// Certifications Section
+.certifications-section {
+  margin-bottom: 4rem;
+  animation: fadeInUp 1s ease-out;
+
+  .cert-card {
+    background: linear-gradient(
+      135deg,
+      rgba($secondary-color, 0.05) 0%,
+      rgba($secondary-color, 0.02) 100%
+    );
+    border: 2px dashed rgba($secondary-color, 0.3);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      padding: 2rem 1.5rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(
+        circle,
+        rgba($secondary-color, 0.1) 0%,
+        transparent 70%
+      );
+      border-radius: 50%;
+    }
+
+    .cert-icon-wrapper {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, $secondary-color 0%, #ffb732 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba($secondary-color, 0.3);
+
+      .cert-icon {
+        width: 35px;
+        height: 35px;
+        color: $bg-white;
+      }
+    }
+
+    .cert-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: $text-dark;
+      margin-bottom: 0.75rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .cert-description {
+      font-size: 1rem;
+      color: $text-medium;
+      max-width: 500px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .cert-badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: $bg-white;
+      font-weight: 600;
+      font-size: 0.875rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+// Stats Section
+.education-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  animation: fadeInUp 1.2s ease-out;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    background: $bg-white;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba($primary-color, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+      .stat-icon svg {
+        transform: scale(1.1);
+      }
+    }
+
+    .stat-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 1rem;
+      background: linear-gradient(
+        135deg,
+        rgba($primary-color, 0.1) 0%,
+        rgba($secondary-color, 0.1) 100%
+      );
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 30px;
+        height: 30px;
+        color: $primary-color;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(
+        135deg,
+        $primary-color 0%,
+        $secondary-color 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: $text-medium;
+      font-weight: 500;
+    }
+  }
+}
+
+// Animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(20px, -20px);
+  }
+  66% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes drawLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
