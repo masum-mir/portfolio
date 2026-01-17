@@ -181,9 +181,9 @@ const degrees = {
       alt_name: "East West University",
       duration: "2023 - running",
       descriptions: [
-      " Studying core CSE subjects with focus on AI, and  ML.",
-      " Worked as a research assistant on academic projects.",
-      " Actively participating in technical workshops, seminars, and academic events.",   
+        " Studying core CSE subjects with focus on AI, and  ML.",
+        " Worked as a research assistant on academic projects.",
+        " Actively participating in technical workshops, seminars, and academic events.",
       ],
       website_link: "https://www.ewubd.edu/",
     },
@@ -208,14 +208,14 @@ const certifications = {
         "https://www.coursera.org/account/accomplishments/specialization/H8CPSFXAJD2G",
       alt_name: "deeplearning.ai",
       color_code: "#00000099",
-    }, 
+    },
   ],
 };
 
 // Experience Page
 const experience = {
   title: "Experience",
-  
+
   description:
     "Experience in backend development using Java and Spring Boot, working on scalable APIs, secure systems, and production-ready applications.",
   header_image_path: "experience.svg",
@@ -224,6 +224,18 @@ const experience = {
       title: "Work",
       work: true,
       experiences: [
+        {
+          title: "Research Assistant",
+          company:
+            "DHMAINetRG",
+          company_url: "https://dhmairg.net",
+          logo_path: "dhmairg-logo.png",
+          duration: "Jan 2025 – Present",
+          location: "Dhaka, Bangladesh",
+          description:
+            "Contributing to research on Future Internet, opportunistic networks, IoT, and Information-Centric Networking. Developing simulation tools, automation scripts, and embedded software for network and IoT experiments.",
+          color: "#0A66C2",
+        },
         {
           title: "Junior Software Engineer",
           company: "Pridesys It Ltd.",
