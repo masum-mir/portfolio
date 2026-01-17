@@ -5,10 +5,10 @@ const skills = {
       title: "Full Stack Development",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Developing end-to-end web applications using modern frameworks like React.js for interactive frontends and Spring Boot for scalable backends.",
-        "⚡ Building responsive, user-friendly interfaces with HTML5, CSS3, and JavaScript while maintaining clean architecture using MVC and RESTful APIs.",
-        "⚡ Designing and implementing secure authentication and authorization systems with JWT and Spring Security.",
-        "⚡ Writing efficient, maintainable, and reusable code by following industry best practices and design principles.",
+        " Building full-stack web apps using React.js and Spring Boot.",
+        " Creating responsive UIs with HTML, CSS, and JavaScript using REST APIs.",
+        " Implementing secure authentication with JWT and Spring Security.",
+        " Writing clean, reusable, and maintainable code following best practices.",
       ],
       softwareSkills: [
         {
@@ -57,10 +57,10 @@ const skills = {
       title: "Cloud & Deployment",
       fileName: "CloudInfraImg",
       skills: [
-        "⚡ Deploying and managing full-stack applications in production environments using cloud platforms and containerization tools.",
-        "⚡ Utilizing Docker for creating lightweight, portable development environments and ensuring smooth deployment pipelines.",
-        "⚡ Configuring and managing MySQL and cloud databases for optimized and secure data handling.",
-        "⚡ Maintaining version control and collaboration through GitHub, and deploying applications seamlessly on Render and Vercel.",
+        " Deploying full-stack applications on cloud platforms.",
+        " Using Docker for containerized development and deployment.",
+        " Managing MySQL and cloud databases securely.",
+        " Version control and deployment using GitHub.",
       ],
       softwareSkills: [
         {
@@ -73,27 +73,27 @@ const skills = {
           fontAwesomeClassname: "simple-icons:github",
           style: { color: "#181717" },
         },
-        {
-          skillName: "Render / Vercel",
-          fontAwesomeClassname: "simple-icons:vercel",
-          style: { color: "#000000" },
-        },
+        // {
+        //   skillName: "Render / Vercel",
+        //   fontAwesomeClassname: "simple-icons:vercel",
+        //   style: { color: "#000000" },
+        // },
       ],
     },
   ],
 };
 
-// 🚀 Currently Learning
+//  Currently Learning
 const learning = {
   data: [
     {
-      title: "Data Science & Machine Learning",
+      title: "Data Science & ML",
       fileName: "DataScienceImg",
       skills: [
-        "⚡ Exploring the foundations of data science — from data preprocessing and feature engineering to statistical analysis and visualization.",
-        "⚡ Learning how to train, evaluate, and optimize machine learning models for predictive and analytical tasks.",
-        "⚡ Working with Python libraries like Pandas, NumPy, and Matplotlib to manipulate and visualize real-world datasets.",
-        "⚡ Experimenting with Scikit-Learn for implementing machine learning algorithms and understanding model performance.",
+        " Learning data preprocessing, analysis, and visualization basics.",
+        " Training and evaluating machine learning models.",
+        " Working with real-world data using Pandas and NumPy.",
+        " Implementing ML algorithms with Scikit-Learn.",
       ],
       softwareSkills: [
         {
@@ -181,9 +181,9 @@ const degrees = {
       alt_name: "East West University",
       duration: "2023 - running",
       descriptions: [
-        "⚡ I have taken varity of courses related to Artificial Intelligence which correspond to Explainable AI, Graph Machine Learning, Computer Vision etc.",
-        "⚡ Apart from this, I have also done research assistantship. As part of it, I have worked on creating new algorithms in Graph ML and Network Science.",
-        "⚡ During my time at university, I was also associated with multimedia department. As part of it, I have worked on some documentry films and interviews.",
+      " Studying core CSE subjects with focus on AI, and  ML.",
+      " Worked as a research assistant on academic projects.",
+      " Actively participating in technical workshops, seminars, and academic events.",   
       ],
       website_link: "https://www.ewubd.edu/",
     },
@@ -208,106 +208,16 @@ const certifications = {
         "https://www.coursera.org/account/accomplishments/specialization/H8CPSFXAJD2G",
       alt_name: "deeplearning.ai",
       color_code: "#00000099",
-    },
-    {
-      title: "ML on GCP",
-      subtitle: "- GCP Training",
-      logo_path: "google_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/EB4VJARK8647",
-      alt_name: "Google",
-      color_code: "#0C9D5899",
-    },
-    {
-      title: "Data Science",
-      subtitle: "- Alex Aklson",
-      logo_path: "ibm_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/PLEAPCSJBZT5",
-      alt_name: "IBM",
-      color_code: "#1F70C199",
-    },
-    {
-      title: "Big Data",
-      subtitle: "- Kim Akers",
-      logo_path: "microsoft_logo.png",
-      certificate_link:
-        "https://drive.google.com/file/d/164zKCFOsI4vGqokc-Qj-e_D00kLDHIrG/view",
-      alt_name: "Microsoft",
-      color_code: "#D83B0199",
-    },
-    {
-      title: "Advanced Data Science",
-      subtitle: "- Romeo Kienzler",
-      logo_path: "ibm_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/BH2T9BRU87BH",
-      alt_name: "IBM",
-      color_code: "#1F70C199",
-    },
-    {
-      title: "Advanced ML on GCP",
-      subtitle: "- GCP Training",
-      logo_path: "google_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/5JZZM7TNQ2AV",
-      alt_name: "Google",
-      color_code: "#0C9D5899",
-    },
-    {
-      title: "DL on Tensorflow",
-      subtitle: "- Laurence Moroney",
-      logo_path: "deeplearning_ai_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/6T4DCUGNK8J8",
-      alt_name: "deeplearning.ai",
-      color_code: "#00000099",
-    },
-    {
-      title: "Fullstack Development",
-      subtitle: "- Jogesh Muppala",
-      logo_path: "coursera_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/certificate/NRANJA66Y2YA",
-      alt_name: "Coursera",
-      color_code: "#2A73CC",
-    },
-    {
-      title: "Kuberenetes on GCP",
-      subtitle: "- Qwiklabs",
-      logo_path: "gcp_logo.png",
-      certificate_link:
-        "https://google.qwiklabs.com/public_profiles/e4d5a92b-faf6-4679-a70b-a9047c0cd750",
-      alt_name: "GCP",
-      color_code: "#4285F499",
-    },
-    {
-      title: "Cryptography",
-      subtitle: "- Saurabh Mukhopadhyay",
-      logo_path: "nptel_logo.png",
-      certificate_link:
-        "https://drive.google.com/open?id=1z5ExD_QJVdU0slLkp8CBqSF3-C3g-ro_",
-      alt_name: "NPTEL",
-      color_code: "#FFBB0099",
-    },
-    {
-      title: "Cloud Architecture",
-      subtitle: "- Qwiklabs",
-      logo_path: "gcp_logo.png",
-      certificate_link:
-        "https://google.qwiklabs.com/public_profiles/5fab4b2d-be6f-408c-8dcb-6d3b58ecb4a2",
-      alt_name: "GCP",
-      color_code: "#4285F499",
-    },
+    }, 
   ],
 };
 
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "Work, and Internship",
+  
   description:
-    "I have worked with many evolving startups as ML and DL Developer, Designer and Software Architect. I have also worked with some well established companies mostly as AI Developer. I love organising events and that is why I am also involved with many opensource communities as a representative.",
+    "Experience in backend development using Java and Spring Boot, working on scalable APIs, secure systems, and production-ready applications.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -322,7 +232,7 @@ const experience = {
           duration: "Oct 2022 - Dec 2023",
           location: "Dhaka, Bangladesh",
           description:
-            "As a Junior Software Engineer at Pridesys IT Ltd., I contributed to building and optimizing backend systems using Java and Spring Boot. I worked on creating scalable APIs, integrating secure authentication, and improving system performance to support production-ready applications.",
+            "Developed and optimized backend services using Java and Spring Boot, built RESTful APIs, implemented secure authentication, and improved application performance.",
           color: "#000000",
         },
       ],
@@ -338,7 +248,7 @@ const experience = {
           duration: "July 2022 - Sep 2022",
           location: "Dhaka, Bangladesh",
           description:
-            "During my internship at Pridesys IT Ltd., I assisted in developing backend features using Java and Spring Boot, focusing on improving recommendation algorithms and implementing efficient server-side logic. This experience strengthened my understanding of backend development and collaborative software engineering practices.",
+            "Assisted in backend development with Java and Spring Boot, worked on server-side logic, and gained hands-on experience in collaborative software development.",
           color: "#000000",
         },
       ],
@@ -425,7 +335,7 @@ const ProjectsData = {
       createdAt: "Dec 31, 2024",
       url: "https://github.com/masum-mir/masum-portfolio",
       description:
-        "🔥 A fully customizable software developer portfolio showcasing projects, experience, and skills with React.js.",
+        " A fully customizable software developer portfolio showcasing projects, experience, and skills with React.js.",
       isFork: false,
       languages: [
         { name: "React.js", iconifyClass: "logos-react" },

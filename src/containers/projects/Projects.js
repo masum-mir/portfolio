@@ -39,7 +39,7 @@ const Projects = () => {
 
             <h1 className="hero-title">Projects</h1>
             <p className="hero-description">
-            My projects make use of a wide range of modern technologies and tools. I have hands-on experience developing full-stack web applications using Java, Spring Boot, and React. I enjoy building scalable backend systems and creating dynamic, responsive frontends that deliver smooth user experiences.
+  I build full-stack web applications using Java, Spring Boot, and React, focusing on scalable backends and responsive, user-friendly frontends.
             </p>
           </div>
         </div>
@@ -246,7 +246,9 @@ const Projects = () => {
             </div>
             <div className="stat-number">{ProjectsData.data.length}+</div>
             <div className="stat-label">Projects</div>
-          </div>
+          </div
+          >
+          <div></div>
 
           <div className="stat-item">
             <div className="stat-icon">
@@ -262,21 +264,7 @@ const Projects = () => {
             <div className="stat-number">{publications.data.length}+</div>
             <div className="stat-label">Publications</div>
           </div>
-
-          <div className="stat-item">
-            <div className="stat-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-            </div>
-            <div className="stat-number">100+</div>
-            <div className="stat-label">Commits</div>
-          </div>
+ 
         </div>
       </div>
     </div>

@@ -91,7 +91,7 @@ const Skills = () => {
             <div className="skill-card learning-card">
               <div className="skill-header">
                 <h2 className="skill-title">{skill.title}</h2>
-                <span className="learning-badge">In Progress</span>
+                {/* <span className="learning-badge">In Progress</span> */}
               </div>
 
               <div className="software-skills">

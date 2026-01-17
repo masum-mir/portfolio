@@ -43,9 +43,7 @@ const Experience = () => {
             </div>
 
             <h1 className="hero-title">{experience.title || "Experience"}</h1>
-            <p className="hero-subtitle">
-              {experience.subtitle || "My professional journey"}
-            </p>
+            
             <p className="hero-description">
               {experience.description ||
                 "Explore my work history and professional experience"}
