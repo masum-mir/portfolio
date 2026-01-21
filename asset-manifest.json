@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.bf1d1fc4.css",
+    "main.js": "/portfolio/static/js/main.ce8857ff.js",
+    "static/js/488.e9c55694.chunk.js": "/portfolio/static/js/488.e9c55694.chunk.js",
+    "static/media/img.jpg": "/portfolio/static/media/img.25098b73cff71744a098.jpg",
+    "static/media/myimg.jpg": "/portfolio/static/media/myimg.a71014fb4a140f71c474.jpg",
+    "static/media/Montserrat-Regular.ttf": "/portfolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/GoogleSans-Italic.ttf": "/portfolio/static/media/GoogleSans-Italic.40bb50bd202405745006.ttf",
+    "static/media/GoogleSans-MediumItalic.ttf": "/portfolio/static/media/GoogleSans-MediumItalic.56d4f777a7997e5a10b3.ttf",
+    "static/media/GoogleSans-BoldItalic.ttf": "/portfolio/static/media/GoogleSans-BoldItalic.d282e9c31d0f894a7f06.ttf",
+    "static/media/GoogleSans-Regular.ttf": "/portfolio/static/media/GoogleSans-Regular.bec0591b6a291c3ca895.ttf",
+    "static/media/GoogleSans-Medium.ttf": "/portfolio/static/media/GoogleSans-Medium.963c3e555aaada9ef8a9.ttf",
+    "static/media/GoogleSans-Bold.ttf": "/portfolio/static/media/GoogleSans-Bold.d907e4bf3e32637a636e.ttf",
+    "static/media/Agustina.woff": "/portfolio/static/media/Agustina.eb0c59dda4cc308cba96.woff",
+    "static/media/ewu-logo.png": "/portfolio/static/media/ewu-logo.7b2f2cbc42f552b70505.png",
+    "static/media/pridesys-it-ltd-logo.png": "/portfolio/static/media/pridesys-it-ltd-logo.145ef1e7158fb99851c1.png",
+    "static/media/logo.png": "/portfolio/static/media/logo.7bfc91742068a3414753.png",
+    "static/media/dhmairg-logo.png": "/portfolio/static/media/dhmairg-logo.179e6bd571cb6f39f501.png",
+    "index.html": "/portfolio/index.html",
+    "main.bf1d1fc4.css.map": "/portfolio/static/css/main.bf1d1fc4.css.map",
+    "main.ce8857ff.js.map": "/portfolio/static/js/main.ce8857ff.js.map",
+    "488.e9c55694.chunk.js.map": "/portfolio/static/js/488.e9c55694.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf1d1fc4.css",
+    "static/js/main.ce8857ff.js"
+  ]
+}
