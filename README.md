@@ -31,9 +31,8 @@ A modern, responsive personal portfolio built with **React** — showcasing educ
 - **Education Section** — Academic background and qualifications
 - **Experience Section** — Work experience and research affiliations
 - **Projects Section** — Highlighted personal and academic projects
-- **Contact Section** — Interactive contact form powered by EmailJS with Google Maps integration
-- **Responsive Design** — Fully optimized for desktop, tablet, and mobile
-- **Dark/Light Mode** — Toggleable theme with SCSS global color variables
+- **Contact Section** — Interactive contact integration
+- **Responsive Design** — Fully optimized for desktop, tablet, and mobile 
 - **Smooth Animations** — Powered by `animate.css` and `GSAP`
 
 ---
