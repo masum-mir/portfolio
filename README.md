@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+ <div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🌐 Personal Portfolio Website
 
-## Available Scripts
+A modern, responsive personal portfolio built with **React** — showcasing education, skills, projects, experience, and contact information.
 
-In the project directory, you can run:
+🔗 **Live Demo:** [masum-mir.github.io/portfolio](https://masum-mir.github.io/portfolio/)
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📸 Preview
 
-### `npm test`
+<div align="center">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Hero Section
+![Hero Section](./home.png)
 
-### `npm run build`
+### Experience Section
+![Experience Section](./experience.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+</div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Features
 
-### `npm run eject`
+- **Greeting / Hero Section** — Animated introduction with a personal tagline
+- **Skills Section** — Visual display of technical skills and tools
+- **Education Section** — Academic background and qualifications
+- **Experience Section** — Work experience and research affiliations
+- **Projects Section** — Highlighted personal and academic projects
+- **Contact Section** — Interactive contact form powered by EmailJS with Google Maps integration
+- **Responsive Design** — Fully optimized for desktop, tablet, and mobile
+- **Dark/Light Mode** — Toggleable theme with SCSS global color variables
+- **Smooth Animations** — Powered by `animate.css` and `GSAP`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Layer | Technology |
+|---|---|
+| Framework | React 19 |
+| Styling | SCSS (Sass), Bootstrap 5, Tailwind CSS |
+| Routing | React Router DOM v7 |
+| Icons | FontAwesome, Lucide React |
+| Animations | Animate.css, GSAP |  
+| Deployment | GitHub Pages (`gh-pages`) |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📁 Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+portfolio/
+├── public/                  # Static assets (favicon, manifest)
+├── src/
+│   ├── assets/
+│   │   ├── fonts/           # Custom fonts (Google Sans, Montserrat, Agustina)
+│   │   └── img/             # Images and logos
+│   ├── components/
+│   │   └── navbar/          # Navbar component
+│   ├── containers/
+│   │   ├── greeting/        # Hero / landing section
+│   │   ├── skills/          # Skills section
+│   │   ├── education/       # Education section
+│   │   ├── experience/      # Experience section
+│   │   ├── projects/        # Projects section
+│   │   ├── contact/         # Contact form & map
+│   │   └── error/           # 404 error page
+│   ├── pages/               # Page-level wrappers for each section
+│   ├── _globalColor.scss    # Global color/theme variables
+│   ├── App.js               # Root component with routing
+│   └── index.js             # React DOM entry point
+├── resume.pdf               # Downloadable resume
+└── package.json
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🚀 Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Prerequisites
 
-### Analyzing the Bundle Size
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+- npm
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Installation
 
-### Making a Progressive Web App
+```bash
+# 1. Clone the repository
+git clone https://github.com/masum-mir/portfolio.git
+cd portfolio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# 2. Install dependencies
+npm install
 
-### Advanced Configuration
+# 3. Start the development server
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📦 Available Scripts
 
-### `npm run build` fails to minify
+| Command | Description |
+|---|---|
+| `npm start` | Run app in development mode |
+| `npm test` | Launch test runner |
+| `npm run build` | Build for production |
+| `npm run deploy` | Deploy to GitHub Pages |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🌍 Deployment
+
+This project is deployed via **GitHub Pages**. To deploy your own version:
+
+1. Update the `homepage` field in `package.json` with your GitHub Pages URL.
+2. Run:
+
+```bash
+npm run deploy
+```
+
+This will build the project and push it to the `gh-pages` branch automatically.
+ 
+ 
