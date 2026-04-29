@@ -67,7 +67,7 @@ portfolio/
 │   │   ├── education/       # Education section
 │   │   ├── experience/      # Experience section
 │   │   ├── projects/        # Projects section
-│   │   ├── contact/         # Contact form & map
+│   │   ├── contact/         # Contact info
 │   │   └── error/           # 404 error page
 │   ├── pages/               # Page-level wrappers for each section
 │   ├── _globalColor.scss    # Global color/theme variables
