@@ -14,7 +14,7 @@ A modern, responsive personal portfolio built with **React** — showcasing educ
 
 <div align="center">
 
-### Hero Section
+### Home Section
 ![Hero Section](./img/home.png)
 
 ### Experience Section
