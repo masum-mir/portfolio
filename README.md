@@ -15,10 +15,10 @@ A modern, responsive personal portfolio built with **React** — showcasing educ
 <div align="center">
 
 ### Hero Section
-![Hero Section](./home.png)
+![Hero Section](./img/home.png)
 
 ### Experience Section
-![Experience Section](./experience.png)
+![Experience Section](./img/experience.png)
 
 </div>
 
