@@ -1,8 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTimes,
+  faHouse,
+  faGraduationCap,
+  faBriefcase,
+  faDiagramProject,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -48,11 +54,11 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { path: "/home", label: "Home" },
-    { path: "/education", label: "Education" },
-    { path: "/experience", label: "Experience" },
-    { path: "/projects", label: "Projects" },
-    { path: "/contact", label: "Contact" },
+    { path: "/home", label: "Home", icon: faHouse },
+    { path: "/education", label: "Education", icon: faGraduationCap },
+    { path: "/experience", label: "Experience", icon: faBriefcase },
+    { path: "/projects", label: "Projects", icon: faDiagramProject },
+    { path: "/contact", label: "Contact", icon: faEnvelope },
   ];
 
   return (
@@ -83,28 +89,6 @@ const Navbar = () => {
             ))}
           </ul>
         </nav>
-
-        {/* // Social Links
-        <div className="nav-social desktop-social">
-          <a
-            href="https://www.linkedin.com/in/your-profile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-            aria-label="LinkedIn"
-          >
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </a>
-          <a
-            href="https://github.com/your-username"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-            aria-label="GitHub"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-        </div> */}
 
         <button
           className={`mobile-menu-toggle ${showNav ? "active" : ""}`}
@@ -163,36 +147,9 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-
-          {/* <div className="mobile-social">
-            <p className="mobile-social-title">Connect with me</p>
-            <div className="mobile-social-links">
-              <a
-                href="https://www.linkedin.com/in/your-profile"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mobile-social-link"
-                aria-label="LinkedIn"
-              >
-                <FontAwesomeIcon icon={faLinkedinIn} />
-                <span>LinkedIn</span>
-              </a>
-              <a
-                href="https://github.com/your-username"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mobile-social-link"
-                aria-label="GitHub"
-              >
-                <FontAwesomeIcon icon={faGithub} />
-                <span>GitHub</span>
-              </a>
-            </div>
-          </div> */}
         </div>
       </div>
 
-      {/* Mobile Overlay */}
       {showNav && <div className="mobile-overlay" onClick={closeNav}></div>}
     </header>
   );

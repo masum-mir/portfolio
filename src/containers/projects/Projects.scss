@@ -4,7 +4,7 @@
 .projects-page {
   min-height: 100vh;
   background: linear-gradient(135deg, $bg-light 0%, #f0f9ff 50%, #fef3e2 100%);
-  padding: 6rem 0 4rem;
+  padding: 1rem 0 4rem;
 
   @media (max-width: 768px) {
     padding: 5rem 0 3rem;
@@ -20,119 +20,7 @@
     padding: 0 1.5rem;
   }
 }
-
-// Hero Section
-.projects-hero {
-  position: relative;
-  text-align: center;
-  padding: 4rem 0 6rem;
-  overflow: hidden;
-
-  @media (max-width: 768px) {
-    padding: 2rem 0 4rem;
-  }
-
-  .hero-background {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-
-    .bg-grid {
-      position: absolute;
-      inset: 0;
-      background-image: linear-gradient(
-          rgba($primary-color, 0.03) 1px,
-          transparent 1px
-        ),
-        linear-gradient(90deg, rgba($primary-color, 0.03) 1px, transparent 1px);
-      background-size: 50px 50px;
-      animation: gridMove 20s linear infinite;
-    }
-
-    .bg-glow {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.3;
-
-      &.glow-1 {
-        width: 500px;
-        height: 500px;
-        background: linear-gradient(135deg, $primary-color, $secondary-color);
-        top: -150px;
-        right: -100px;
-        animation: float 20s infinite ease-in-out;
-      }
-
-      &.glow-2 {
-        width: 400px;
-        height: 400px;
-        background: linear-gradient(135deg, $blue-color, $purple-color);
-        bottom: -100px;
-        left: -100px;
-        animation: float 25s infinite ease-in-out reverse;
-      }
-
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    animation: fadeInUp 0.8s ease-out;
-  }
-
-  .hero-badge {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 2rem;
-    background: linear-gradient(
-      135deg,
-      $primary-color 0%,
-      $secondary-color 100%
-    );
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 30px rgba($primary-color, 0.3);
-    animation: pulse 3s infinite;
-
-    .badge-icon {
-      width: 40px;
-      height: 40px;
-      color: $bg-white;
-    }
-  }
-
-  .hero-title {
-    font-size: 4rem;
-    font-weight: 800;
-    color: $text-dark;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
-
-    @media (max-width: 768px) {
-      font-size: 2.5rem;
-    }
-  }
-
-  .hero-description {
-    font-size: 1.25rem;
-    color: $text-medium;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.7;
-
-    @media (max-width: 768px) {
-      font-size: 1rem;
-    }
-  }
-}
-
+ 
 // Section Header
 .section-header {
   display: flex;

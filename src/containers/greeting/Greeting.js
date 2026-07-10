@@ -32,11 +32,7 @@ const Greeting = () => {
               <span className="name-text">Masum</span>
               <span className="cursor-blink">|</span>
             </h1>
-
-            <div className="title-wrapper">
-              <h2 className="job-title">Junior Software Engineer</h2>
-              <div className="title-underline"></div>
-            </div>
+ 
 
             <p className="greeting-description">
               Skilled in <span className="highlight">Java</span>,{" "}

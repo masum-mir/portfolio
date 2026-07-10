@@ -13,37 +13,7 @@ const Projects = () => {
   return (
     <div className="projects-page">
       <div className="projects-wrapper">
-        <div className="projects-hero">
-          {/* <div className="hero-background">
-            <div className="bg-grid"></div>
-            <div className="bg-glow glow-1"></div>
-            <div className="bg-glow glow-2"></div>
-          </div> */}
-
-          <div className="hero-content">
-            <div className="hero-badge">
-              <svg
-                className="badge-icon"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                />
-              </svg>
-            </div>
-
-            <h1 className="hero-title">Projects</h1>
-            <p className="hero-description">
-  I build full-stack web applications using Java, Spring Boot, and React, focusing on scalable backends and responsive, user-friendly frontends.
-            </p>
-          </div>
-        </div>
-
+      
         <div className="projects-section">
           <div className="section-header">
             <div className="header-line"></div>

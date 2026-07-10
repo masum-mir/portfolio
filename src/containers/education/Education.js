@@ -5,41 +5,8 @@ const Education = () => {
   return (
     <div className="education-page">
       <div className="education-wrapper">
-        <div className="education-hero">
-          {/* <div className="hero-background">
-            <div className="hero-circle circle-1"></div>
-            <div className="hero-circle circle-2"></div>
-            <div className="hero-circle circle-3"></div>
-          </div> */}
-
-          <div className="hero-content">
-            <div className="hero-badge">
-              <svg
-                className="badge-icon"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 14l9-5-9-5-9 5 9 5z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                />
-              </svg>
-            </div>
-
-            <h1 className="hero-title">Education</h1>
-            <p className="hero-description">
-              My academic journey and qualifications that shaped my career
-            </p>
-          </div>
+        <div className="education-hero"> 
+ 
         </div>
 
         {/* degree section */}
@@ -155,33 +122,7 @@ const Education = () => {
             ))}
           </div>
         </div>
-
-        {/* Certifications Section */}
-        <div className="certifications-section">
-          <div className="cert-card">
-            <div className="cert-icon-wrapper">
-              <svg
-                className="cert-icon"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                />
-              </svg>
-            </div>
-            <h3 className="cert-title">Certifications & Achievements</h3>
-            <p className="cert-description">
-              Professional certifications and notable achievements will be
-              showcased here
-            </p>
-            <div className="cert-badge">Coming Soon</div>
-          </div>
-        </div>
+ 
       </div>
     </div>
   );

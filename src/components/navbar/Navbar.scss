@@ -6,6 +6,8 @@
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  box-sizing: border-box;
   z-index: 1000;
   background: rgba($bg-white, 0.95);
   backdrop-filter: blur(10px);
@@ -41,7 +43,7 @@
 
   .logo-wrapper {
     display: flex;
-    align-items: left;
+    align-items: center;
     gap: 0.5rem;
     transition: transform 0.3s ease;
 
@@ -102,7 +104,7 @@
 .desktop-nav {
   flex: 1;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
 
   @media (max-width: 1024px) {
     display: none;
@@ -180,42 +182,6 @@
       .nav-icon {
         color: $secondary-color;
       }
-    }
-  }
-}
-
-// Desktop Social Links
-.desktop-social {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-
-  @media (max-width: 1024px) {
-    display: none;
-  }
-
-  .social-link {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $text-medium;
-    background: $bg-light;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: $bg-white;
-      background: linear-gradient(
-        135deg,
-        $primary-color 0%,
-        $secondary-color 100%
-      );
-      transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba($primary-color, 0.3);
     }
   }
 }
@@ -411,51 +377,6 @@
     }
   }
 
-  .mobile-social {
-    padding-top: 1rem;
-    border-top: 2px solid $bg-light;
-
-    .mobile-social-title {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: $text-light;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 1rem;
-    }
-
-    .mobile-social-links {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-    }
-
-    .mobile-social-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.875rem;
-      background: $bg-light;
-      border-radius: 10px;
-      color: $text-medium;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-
-      &:hover {
-        background: linear-gradient(
-          135deg,
-          $primary-color 0%,
-          $secondary-color 100%
-        );
-        color: $bg-white;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba($primary-color, 0.3);
-      }
-    }
-  }
 }
 
 // Mobile Overlay
