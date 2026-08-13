@@ -1,131 +1,156 @@
- <div align="center">
+# Md Masum — Portfolio
 
-# 🌐 Personal Portfolio Website
+A modern and responsive personal portfolio website showcasing my work in **Software Engineering, Machine Learning, Deep Learning, and Research**.
 
-A modern, responsive personal portfolio built with **React** — showcasing education, skills, projects, experience, and contact information.
+The portfolio presents my technical skills, professional experience, research work, publications, projects, education, and contact information in a clean and recruiter-friendly interface.
 
-🔗 **Live Demo:** [masum-mir.github.io/portfolio](https://masum-mir.github.io/portfolio/)
+## About Me
 
-</div>
+I am a **Software Engineer and Researcher** with experience in backend development, full-stack applications, machine learning, deep learning, IoT, and networked systems.
 
----
+My work combines practical software development with academic research, experimentation, and publication.
 
-## 📸 Preview
+## Portfolio Highlights
 
-<div align="center">
+- Professional introduction and technical expertise
+- Software Engineering, Machine Learning, and Deep Learning skills
+- Professional and research experience
+- Research publications
+- Selected software and research projects
+- Education and academic background
+- Resume access
+- GitHub and LinkedIn integration
+- Contact information and professional profiles
+- Responsive design for desktop, tablet, and mobile devices
+- Accessible and user-friendly interface
 
-### Home Section
-![Hero Section](./img/home.png)
+## Technologies Used
 
-### Experience Section
-![Experience Section](./img/experience.png)
+### Frontend
 
-</div>
+- React.js
+- JavaScript
+- React Router
+- SCSS
+- HTML5
+- Font Awesome
 
----
+### Development
 
-## ✨ Features
+- Git
+- GitHub
+- npm
 
-- **Greeting / Hero Section** — Animated introduction with a personal tagline
-- **Skills Section** — Visual display of technical skills and tools
-- **Education Section** — Academic background and qualifications
-- **Experience Section** — Work experience and research affiliations
-- **Projects Section** — Highlighted personal and academic projects
-- **Contact Section** — Interactive contact integration
-- **Responsive Design** — Fully optimized for desktop, tablet, and mobile 
-- **Smooth Animations** — Powered by `animate.css` and `GSAP`
+## Main Sections
 
----
+The portfolio includes the following pages:
 
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Framework | React 19 |
-| Styling | SCSS (Sass), Bootstrap 5, Tailwind CSS |
-| Routing | React Router DOM v7 |
-| Icons | FontAwesome, Lucide React |
-| Animations | Animate.css, GSAP |  
-| Deployment | GitHub Pages (`gh-pages`) |
-
----
-
-## 📁 Project Structure
-
-```
-portfolio/
-├── public/                  # Static assets (favicon, manifest)
-├── src/
-│   ├── assets/
-│   │   ├── fonts/           # Custom fonts (Google Sans, Montserrat, Agustina)
-│   │   └── img/             # Images and logos
-│   ├── components/
-│   │   └── navbar/          # Navbar component
-│   ├── containers/
-│   │   ├── greeting/        # Hero / landing section
-│   │   ├── skills/          # Skills section
-│   │   ├── education/       # Education section
-│   │   ├── experience/      # Experience section
-│   │   ├── projects/        # Projects section
-│   │   ├── contact/         # Contact info
-│   │   └── error/           # 404 error page
-│   ├── pages/               # Page-level wrappers for each section
-│   ├── _globalColor.scss    # Global color/theme variables
-│   ├── App.js               # Root component with routing
-│   └── index.js             # React DOM entry point
-├── resume.pdf               # Downloadable resume
-└── package.json
-```
-
----
-
-## 🚀 Getting Started
+- **Home** — Introduction, role focus, technical expertise, and core skills
+- **Experience & Research** — Professional experience, research work, and publications
+- **Projects** — Selected projects with technologies and GitHub repository links
+- **Education** — Academic background and university education
+- **Contact** — Email, phone, location, and professional social profiles
+ 
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v16 or higher recommended)
-- npm
+Make sure the following are installed:
 
-### Installation
+- Node.js
+- npm
+- Git
+
+### Clone the Repository
 
 ```bash
-# 1. Clone the repository
 git clone https://github.com/masum-mir/portfolio.git
 cd portfolio
+```
 
-# 2. Install dependencies
+### Install Dependencies
+
+```bash
 npm install
+```
 
-# 3. Start the development server
+### Start the Development Server
+
+```bash
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+The application will run locally at:
 
----
+```text
+http://localhost:3000
+```
 
-## 📦 Available Scripts
+## Production Build
 
-| Command | Description |
-|---|---|
-| `npm start` | Run app in development mode |
-| `npm test` | Launch test runner |
-| `npm run build` | Build for production |
-| `npm run deploy` | Deploy to GitHub Pages |
+Create an optimized production build with:
 
----
+```bash
+npm run build
+```
 
-## 🌍 Deployment
+The generated production files will be available in the `build` directory.
 
-This project is deployed via **GitHub Pages**. To deploy your own version:
+## Deployment
 
-1. Update the `homepage` field in `package.json` with your GitHub Pages URL.
-2. Run:
+If the GitHub Pages deployment script is configured in `package.json`, deploy with:
 
 ```bash
 npm run deploy
 ```
 
-This will build the project and push it to the `gh-pages` branch automatically.
- 
- 
+## Updating Portfolio Content
+
+Most portfolio information is maintained in:
+
+```text
+src/data/portfolio.js
+```
+
+Use this file to update content such as:
+
+- Skills
+- Professional experience
+- Research experience
+- Publications
+- Projects
+- Education
+
+Page-specific UI and styles are organized inside their corresponding page directories.
+
+Example:
+
+```text
+src/pages/home/
+├── Home.js
+└── Home.scss
+```
+
+This keeps each page and its styling together and makes the project easier to maintain.
+
+## Responsive Design
+
+The portfolio is designed to work across:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+Layouts, typography, cards, navigation, images, and spacing adapt to different screen sizes.
+
+## Contact
+
+**Md Masum**
+
+- Email: masummir773@gmail.com
+- GitHub: https://github.com/masum-mir
+- LinkedIn: https://www.linkedin.com/in/md-masum-mir/
+
+---
+
+Built and maintained by **Md Masum Mir**.

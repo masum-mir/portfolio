@@ -8,8 +8,17 @@ import {
   faBriefcase,
   faDiagramProject,
   faEnvelope,
+  faFileArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.scss";
+
+const navItems = [
+  { path: "/", label: "Home", icon: faHouse },
+  { path: "/experience", label: "Experience & Research", icon: faBriefcase },
+  { path: "/projects", label: "Projects", icon: faDiagramProject },
+  { path: "/education", label: "Education", icon: faGraduationCap },
+  { path: "/contact", label: "Contact", icon: faEnvelope },
+];
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
@@ -17,19 +26,10 @@ const Navbar = () => {
   const navRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 16);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -38,51 +38,43 @@ const Navbar = () => {
         setShowNav(false);
       }
     };
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setShowNav(false);
+    };
 
+    document.body.style.overflow = showNav ? "hidden" : "";
     document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+
     return () => {
+      document.body.style.overflow = "";
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, [showNav]);
 
-  const closeNav = () => {
-    setShowNav(false);
-  };
-
-  const toggleNav = () => {
-    setShowNav(!showNav);
-  };
-
-  const navItems = [
-    { path: "/home", label: "Home", icon: faHouse },
-    { path: "/education", label: "Education", icon: faGraduationCap },
-    { path: "/experience", label: "Experience", icon: faBriefcase },
-    { path: "/projects", label: "Projects", icon: faDiagramProject },
-    { path: "/contact", label: "Contact", icon: faEnvelope },
-  ];
+  const closeNav = () => setShowNav(false);
 
   return (
     <header className={`navbar ${scrolled ? "scrolled" : ""}`} ref={navRef}>
       <div className="navbar-container">
-        <NavLink className="navbar-logo" to="/" onClick={closeNav}>
-          <div className="logo-wrapper">
-            <span className="logo-icon">M</span>
-            <span className="logo-text">asum</span>
-          </div>
+        <NavLink className="navbar-logo" to="/" onClick={closeNav} aria-label="Masum portfolio home">
+          <span className="logo-icon">M</span>
+          <span className="logo-copy">
+            <strong>Masum</strong> 
+          </span>
         </NavLink>
 
-        <nav className="nav-menu desktop-nav">
+        <nav className="nav-menu desktop-nav" aria-label="Primary navigation">
           <ul className="nav-list">
-            {navItems.map((item, index) => (
-              <li key={index} className="nav-item">
+            {navItems.map((item) => (
+              <li key={item.path} className="nav-item">
                 <NavLink
                   to={item.path}
-                  className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
-                  }
+                  end={item.path === "/"}
+                  className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
                   onClick={closeNav}
                 >
-                  <FontAwesomeIcon icon={item.icon} className="nav-icon" />
                   <span>{item.label}</span>
                 </NavLink>
               </li>
@@ -90,10 +82,21 @@ const Navbar = () => {
           </ul>
         </nav>
 
+        <a
+          className="resume-link desktop-resume"
+          href={`${process.env.PUBLIC_URL}/resume.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faFileArrowDown} /> Resume
+        </a>
+
         <button
           className={`mobile-menu-toggle ${showNav ? "active" : ""}`}
-          onClick={toggleNav}
-          aria-label="Toggle navigation"
+          onClick={() => setShowNav((value) => !value)}
+          aria-label={showNav ? "Close navigation" : "Open navigation"}
+          aria-expanded={showNav}
+          aria-controls="mobile-navigation"
         >
           <span className="hamburger-line"></span>
           <span className="hamburger-line"></span>
@@ -101,56 +104,43 @@ const Navbar = () => {
         </button>
       </div>
 
-      <div className={`mobile-nav ${showNav ? "active" : ""}`}>
+      <div id="mobile-navigation" className={`mobile-nav ${showNav ? "active" : ""}`}>
         <div className="mobile-nav-content">
           <div className="mobile-nav-header">
-            <span className="mobile-nav-title">Navigation</span>
-            <button
-              className="mobile-close-btn"
-              onClick={closeNav}
-              aria-label="Close menu"
-            >
+            <span>Navigation</span>
+            <button onClick={closeNav} aria-label="Close navigation">
               <FontAwesomeIcon icon={faTimes} />
             </button>
           </div>
 
           <ul className="mobile-nav-list">
-            {navItems.map((item, index) => (
-              <li key={index} className="mobile-nav-item">
+            {navItems.map((item) => (
+              <li key={item.path}>
                 <NavLink
                   to={item.path}
-                  className={({ isActive }) =>
-                    isActive ? "mobile-nav-link active" : "mobile-nav-link"
-                  }
+                  end={item.path === "/"}
+                  className={({ isActive }) => (isActive ? "mobile-nav-link active" : "mobile-nav-link")}
                   onClick={closeNav}
                 >
-                  <div className="mobile-link-content">
-                    <FontAwesomeIcon icon={item.icon} className="mobile-icon" />
-                    <span>{item.label}</span>
-                  </div>
-                  <svg
-                    className="mobile-arrow"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M7.5 15L12.5 10L7.5 5"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <FontAwesomeIcon icon={item.icon} />
+                  <span>{item.label}</span>
                 </NavLink>
               </li>
             ))}
           </ul>
+
+          <a
+            className="resume-link mobile-resume"
+            href={`${process.env.PUBLIC_URL}/resume.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faFileArrowDown} /> View Resume
+          </a>
         </div>
       </div>
 
-      {showNav && <div className="mobile-overlay" onClick={closeNav}></div>}
+      {showNav && <button className="mobile-overlay" onClick={closeNav} aria-label="Close navigation overlay" />}
     </header>
   );
 };

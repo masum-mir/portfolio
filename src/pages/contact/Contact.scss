@@ -1,0 +1,657 @@
+@import "../../globalColor";
+
+$contact-max-width: 1180px;
+$desktop-side-space: 40px;
+$mobile-side-space: 28px;
+
+.contact-container {
+  min-height: 100vh;
+
+  padding: 76px 0 96px;
+
+  background: $bg-light;
+}
+
+.contact-content {
+  width: min($contact-max-width, calc(100% - $desktop-side-space));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   PAGE INTRO
+========================================================= */
+
+.contact-intro {
+  width: 100%;
+
+  margin: 0 0 58px;
+
+  .page-eyebrow {
+    display: block;
+
+    margin: 0;
+  }
+
+  h1 {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 10px 0 0;
+
+    color: $text-dark;
+
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.045em;
+  }
+
+  p {
+    width: 100%;
+    max-width: none;
+
+    margin: 18px 0 0;
+
+    color: $text-medium;
+
+    font-size: 1rem;
+    line-height: 1.75;
+
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-word;
+  }
+}
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.page-eyebrow,
+.section-kicker {
+  color: $secondary-color;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   CONTACT GRID
+========================================================= */
+
+.contact-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(330px, 0.72fr);
+
+  align-items: start;
+
+  gap: 44px;
+}
+
+/* =========================================================
+   CONTACT INFORMATION
+========================================================= */
+
+.contact-info-section {
+  width: 100%;
+  min-width: 0;
+}
+
+/* =========================================================
+   CONTACT SECTION HEADING
+========================================================= */
+
+.contact-section-heading {
+  margin-bottom: 22px;
+
+  h2 {
+    margin: 6px 0 0;
+
+    color: $text-dark;
+
+    font-size: 32px;
+    font-weight: 750;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+  }
+}
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.contact-card {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 12px;
+
+  padding: 16px 17px;
+
+  border: 1px solid $border-color;
+  border-radius: 14px;
+
+  background: #fff;
+
+  color: $text-dark;
+
+  text-decoration: none;
+
+  box-shadow: $shadow-sm;
+
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease,
+    border-color 0.16s ease;
+
+  &:hover:not(.static-card) {
+    transform: translateY(-2px);
+
+    border-color: #c9d6e6;
+
+    box-shadow: $shadow-md;
+  }
+}
+
+/* =========================================================
+   STATIC LOCATION CARD
+========================================================= */
+
+.static-card {
+  cursor: default;
+}
+
+/* =========================================================
+   CONTACT ICON
+========================================================= */
+
+.card-icon {
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 11px;
+
+  color: $secondary-color;
+
+  background: rgba($secondary-color, 0.08);
+
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.card-content {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 1.3;
+
+  small {
+    color: $text-light;
+
+    font-size: 0.68rem;
+    font-weight: 750;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.07em;
+
+    text-transform: uppercase;
+  }
+
+  strong {
+    margin-top: 4px;
+
+    color: $text-dark;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    line-height: 1.45;
+
+    overflow-wrap: anywhere;
+  }
+}
+
+/* =========================================================
+   CARD ARROW
+========================================================= */
+
+.card-arrow {
+  flex-shrink: 0;
+
+  color: $secondary-color;
+
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+/* =========================================================
+   SOCIAL SECTION
+========================================================= */
+
+.social-section {
+  margin-top: 26px;
+
+  > span {
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: $text-light;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.07em;
+
+    text-transform: uppercase;
+  }
+}
+
+/* =========================================================
+   SOCIAL LINKS
+========================================================= */
+
+.social-links {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 8px;
+
+  a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-height: 38px;
+
+    padding: 8px 11px;
+
+    border: 1px solid #d9e2ee;
+    border-radius: 10px;
+
+    background: #fff;
+
+    color: #435571;
+
+    text-decoration: none;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    transition:
+      color 0.16s ease,
+      border-color 0.16s ease,
+      background 0.16s ease;
+
+    &:hover {
+      color: $secondary-color;
+
+      border-color: #c6d5e7;
+
+      background: #f8fbff;
+    }
+  }
+}
+
+/* =========================================================
+   PROFILE CARD
+========================================================= */
+
+.contact-profile-card {
+  width: 100%;
+
+  padding: 10px 10px 23px;
+
+  border: 1px solid $border-color;
+  border-radius: 22px;
+
+  background: #fff;
+
+  box-shadow: $shadow-md;
+
+  p {
+    width: auto;
+
+    margin: 14px 12px 0;
+
+    color: $text-medium;
+
+    font-size: 0.88rem;
+    line-height: 1.7;
+
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-word;
+  }
+}
+
+/* =========================================================
+   PROFILE PHOTO
+========================================================= */
+
+.contact-photo-wrap {
+  width: 100%;
+
+  overflow: hidden;
+
+  aspect-ratio: 4 / 3.4;
+
+  border-radius: 15px;
+
+  background: #e7edf5;
+
+  img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 22%;
+  }
+}
+
+/* =========================================================
+   AVAILABILITY
+========================================================= */
+
+.availability-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 18px 12px 0;
+
+  color: $text-dark;
+
+  font-size: 0.88rem;
+  line-height: 1.45;
+
+  strong {
+    font-weight: 750;
+  }
+}
+
+/* =========================================================
+   AVAILABILITY DOT
+========================================================= */
+
+.availability-dot {
+  width: 9px;
+  height: 9px;
+
+  flex: 0 0 9px;
+
+  border-radius: 50%;
+
+  background: $success-color;
+
+  box-shadow: 0 0 0 4px rgba($success-color, 0.1);
+}
+
+/* =========================================================
+   EMAIL CTA
+========================================================= */
+
+.email-cta {
+  min-height: 42px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 19px 12px 0;
+
+  padding: 10px 15px;
+
+  border: 1px solid $primary-color;
+  border-radius: 10px;
+
+  color: #fff;
+
+  background: $primary-color;
+
+  text-decoration: none;
+
+  font-size: 0.82rem;
+  font-weight: 750;
+
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease,
+    background 0.16s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 24px rgba($primary-color, 0.2);
+  }
+}
+
+/* =========================================================
+   SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1050px) {
+  .contact-grid {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(310px, 0.72fr);
+
+    gap: 32px;
+  }
+
+  .contact-intro h1 {
+    max-width: 930px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 820px) {
+  .contact-container {
+    padding: 60px 0 76px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+  }
+
+  .contact-profile-card {
+    width: 100%;
+    max-width: 540px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+  .contact-container {
+    padding: 48px 0 64px;
+  }
+
+  .contact-content {
+    width: calc(100% - $mobile-side-space);
+  }
+
+  /* INTRO */
+
+  .contact-intro {
+    margin-bottom: 42px;
+
+    h1 {
+      max-width: none;
+
+      font-size: clamp(1.95rem, 8vw, 2.5rem);
+
+      line-height: 1.13;
+    }
+
+    p {
+      margin-top: 15px;
+
+      font-size: 0.94rem;
+      line-height: 1.68;
+
+      text-align: left;
+    }
+  }
+
+  /* CONTACT */
+
+  .contact-section-heading {
+    margin-bottom: 18px;
+  }
+
+  .contact-card {
+    padding: 14px;
+
+    gap: 12px;
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+  /* SOCIAL */
+
+  .social-section {
+    margin-top: 22px;
+  }
+
+  /* PROFILE */
+
+  .contact-profile-card {
+    max-width: none;
+
+    border-radius: 19px;
+
+    p {
+      font-size: 0.86rem;
+
+      text-align: left;
+    }
+  }
+
+  .contact-photo-wrap {
+    border-radius: 13px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .contact-content {
+    width: calc(100% - 22px);
+  }
+
+  .contact-intro h1 {
+    font-size: 1.85rem;
+  }
+
+  .contact-card {
+    align-items: flex-start;
+  }
+
+  .card-arrow {
+    margin-top: 6px;
+  }
+
+  .social-links {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    a {
+      width: 100%;
+
+      justify-content: center;
+    }
+  }
+
+  .availability-row {
+    align-items: flex-start;
+  }
+
+  .availability-dot {
+    margin-top: 5px;
+  }
+
+  .email-cta {
+    display: flex;
+
+    width: calc(100% - 24px);
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-card,
+  .email-cta {
+    transition: none;
+  }
+
+  .contact-card:hover,
+  .email-cta:hover {
+    transform: none;
+  }
+}

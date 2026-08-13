@@ -1,0 +1,820 @@
+@import "../../globalColor";
+
+$home-max-width: 1180px;
+$desktop-side-space: 40px;
+$mobile-side-space: 28px;
+
+.greeting-content,
+.skills-shell {
+  width: min($home-max-width, calc(100% - $desktop-side-space));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.greeting-container {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  padding: 76px 0 86px;
+
+  background:
+    radial-gradient(
+      circle at 85% 16%,
+      rgba($secondary-color, 0.08),
+      transparent 30%
+    ),
+    $bg-light;
+}
+
+.greeting-content {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(320px, 0.75fr);
+
+  align-items: center;
+  gap: 64px;
+}
+
+.greeting-text-section {
+  width: 100%;
+  min-width: 0;
+}
+
+.intro-label {
+  margin: 0 0 8px;
+
+  color: $secondary-color;
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.greeting-heading {
+  margin: 0;
+
+  color: $text-dark;
+
+  font-size: clamp(3.1rem, 5.4vw, 5rem);
+  line-height: 1;
+
+  letter-spacing: -0.055em;
+}
+
+.career-title {
+  max-width: 700px;
+
+  margin: 20px 0 0;
+
+  color: #2e4262;
+
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  line-height: 1.45;
+
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+}
+
+.greeting-description {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 18px 0 0;
+
+  color: $text-medium;
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   EXPERTISE TAGS
+========================================================= */
+
+.expertise-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 24px;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 11px;
+
+    border: 1px solid #dce4ef;
+    border-radius: 999px;
+
+    background: #fff;
+    color: #485a73;
+
+    font-size: 0.76rem;
+    font-weight: 650;
+  }
+}
+
+/* =========================================================
+   CTA BUTTONS
+========================================================= */
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 30px;
+
+  .btn {
+    min-height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 12px 19px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-size: 0.92rem;
+    font-weight: 700;
+
+    transition:
+      transform 0.16s ease,
+      box-shadow 0.16s ease,
+      background 0.16s ease,
+      border-color 0.16s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  .btn-primary {
+    border: 1px solid $primary-color;
+
+    color: #fff;
+    background: $primary-color;
+
+    box-shadow: 0 11px 25px rgba($primary-color, 0.17);
+
+    &:hover {
+      box-shadow: 0 15px 34px rgba($primary-color, 0.22);
+    }
+  }
+
+  .btn-secondary {
+    border: 1px solid #d7e0ec;
+
+    color: $primary-color;
+    background: #fff;
+
+    &:hover {
+      border-color: #c8d4e4;
+
+      background: #f9fbfd;
+
+      box-shadow: $shadow-sm;
+    }
+  }
+}
+
+/* =========================================================
+   PROFESSIONAL LINKS
+========================================================= */
+
+.professional-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 22px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: $text-medium;
+
+    text-decoration: none;
+
+    font-size: 0.84rem;
+    font-weight: 650;
+
+    transition: color 0.16s ease;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
+.greeting-image-section {
+  width: 100%;
+  max-width: 400px;
+
+  justify-self: end;
+}
+
+.profile-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  padding: 10px;
+
+  border: 1px solid #dce4ef;
+  border-radius: 26px;
+
+  background: #fff;
+
+  box-shadow: 0 28px 70px rgba(15, 42, 86, 0.12);
+}
+
+.profile-image-wrap {
+  width: 100%;
+
+  overflow: hidden;
+
+  aspect-ratio: 4 / 4.35;
+
+  border-radius: 19px;
+
+  background: #e8edf4;
+}
+
+.profile-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+/* =========================================================
+   PROFILE SUMMARY
+========================================================= */
+
+.profile-summary {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding: 17px 10px 8px;
+
+  > div:first-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  span {
+    color: $text-light;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+  }
+
+  strong {
+    margin-top: 4px;
+
+    color: $text-dark;
+
+    font-size: 0.95rem;
+  }
+
+  small {
+    margin-top: 3px;
+
+    color: $text-medium;
+
+    font-size: 0.75rem;
+  }
+}
+
+.research-badge {
+  flex-shrink: 0;
+
+  padding: 7px 9px;
+
+  border-radius: 9px;
+
+  color: $secondary-color;
+
+  background: rgba($secondary-color, 0.08);
+
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   SKILLS SECTION
+========================================================= */
+
+.skills-container {
+  padding: 84px 0 96px;
+
+  border-top: 1px solid $border-color;
+
+  background: #fff;
+}
+
+.skills-shell {
+  display: flex;
+  flex-direction: column;
+
+  align-items: stretch;
+}
+
+/* =========================================================
+   SKILLS INTRO
+========================================================= */
+
+.skills-intro {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin: 0 0 34px;
+
+  text-align: left;
+
+  .page-eyebrow {
+    margin: 0;
+  }
+
+  h2 {
+    width: 100%;
+    max-width: 980px;
+
+    margin: 10px 0 0;
+
+    color: $text-dark;
+
+    font-size: clamp(2rem, 3.2vw, 2.85rem);
+    line-height: 1.13;
+
+    letter-spacing: -0.04em;
+  }
+
+  p {
+    width: 100%;
+
+    margin: 14px 0 0;
+
+    color: $text-medium;
+
+    font-size: 1rem;
+    line-height: 1.72;
+  }
+}
+
+.page-eyebrow {
+  display: block;
+
+  color: $secondary-color;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   SKILLS GRID
+========================================================= */
+
+.skills-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  gap: 18px;
+}
+
+/* =========================================================
+   SKILL CARD
+========================================================= */
+
+.skill-card {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 23px;
+
+  border: 1px solid $border-color;
+  border-radius: 18px;
+
+  background: $bg-light;
+
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+
+    border-color: #cad6e5;
+
+    box-shadow: $shadow-md;
+  }
+
+  &.research-card {
+    background: linear-gradient(180deg, #f8fbff 0%, #f5f8fe 100%);
+  }
+
+  h3 {
+    margin: 0;
+
+    color: $text-dark;
+
+    font-size: 1.15rem;
+    line-height: 1.35;
+
+    letter-spacing: -0.02em;
+  }
+
+  ul {
+    margin: 18px 0 0;
+    padding-left: 19px;
+
+    color: $text-medium;
+
+    font-size: 0.86rem;
+    line-height: 1.66;
+
+    li + li {
+      margin-top: 7px;
+    }
+  }
+}
+
+/* =========================================================
+   SKILL TAGS
+========================================================= */
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 15px;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 28px;
+
+    padding: 5px 9px;
+
+    border: 1px solid #dbe4ef;
+    border-radius: 999px;
+
+    background: #fff;
+    color: #495b75;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+  }
+}
+
+/* =========================================================
+   ROLE FOCUS
+========================================================= */
+
+.focus-strip {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  margin-top: 20px;
+
+  gap: 1px;
+
+  overflow: hidden;
+
+  border: 1px solid #1e3358;
+  border-radius: 18px;
+
+  background: #1e3358;
+
+  > div {
+    min-width: 0;
+
+    padding: 23px;
+
+    background: $primary-color;
+  }
+
+  span {
+    display: block;
+
+    color: #7fa8ff;
+
+    font-size: 0.68rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+  }
+
+  strong {
+    display: block;
+
+    margin-top: 9px;
+
+    color: #fff;
+
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  p {
+    margin: 8px 0 0;
+
+    color: #bac7dc;
+
+    font-size: 0.79rem;
+    line-height: 1.55;
+  }
+}
+
+/* =========================================================
+   LAPTOP / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+  .greeting-content {
+    grid-template-columns:
+      minmax(0, 1.1fr)
+      minmax(300px, 0.75fr);
+
+    gap: 44px;
+  }
+
+  .greeting-image-section {
+    max-width: 370px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .greeting-container {
+    min-height: auto;
+
+    padding: 66px 0 74px;
+  }
+
+  .greeting-content {
+    grid-template-columns: 1fr;
+
+    gap: 46px;
+  }
+
+  .greeting-text-section {
+    width: 100%;
+    max-width: 760px;
+  }
+
+  .greeting-image-section {
+    width: 100%;
+    max-width: 370px;
+
+    justify-self: start;
+  }
+
+  .skills-container {
+    padding: 74px 0 82px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .focus-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+  .greeting-content,
+  .skills-shell {
+    width: calc(100% - $mobile-side-space);
+  }
+
+  .greeting-container {
+    padding: 48px 0 60px;
+  }
+
+  .greeting-content {
+    gap: 36px;
+  }
+
+  .intro-label {
+    font-size: 0.92rem;
+  }
+
+  .greeting-heading {
+    font-size: clamp(2.5rem, 13vw, 3.8rem);
+    line-height: 1.04;
+  }
+
+  .career-title {
+    margin-top: 15px;
+
+    font-size: 1.03rem;
+    line-height: 1.45;
+  }
+
+  .greeting-description {
+    margin-top: 15px;
+
+    font-size: 0.95rem;
+    line-height: 1.68;
+  }
+
+  .expertise-row {
+    margin-top: 20px;
+  }
+
+  .cta-buttons {
+    display: grid;
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .professional-links {
+    gap: 14px;
+
+    margin-top: 20px;
+  }
+
+  .greeting-image-section {
+    max-width: 100%;
+  }
+
+  .profile-card {
+    border-radius: 20px;
+  }
+
+  .profile-image-wrap {
+    border-radius: 15px;
+  }
+
+  .profile-summary {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  /* Skills */
+
+  .skills-container {
+    padding: 62px 0 70px;
+  }
+
+  .skills-intro {
+    margin-bottom: 28px;
+
+    h2 {
+      max-width: none;
+
+      font-size: clamp(1.75rem, 8vw, 2.25rem);
+      line-height: 1.16;
+    }
+
+    p {
+      max-width: none;
+
+      margin-top: 13px;
+
+      font-size: 0.94rem;
+      line-height: 1.68;
+    }
+  }
+
+  .page-eyebrow {
+    font-size: 0.69rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .skill-card {
+    padding: 20px;
+
+    border-radius: 16px;
+  }
+
+  .focus-strip {
+    margin-top: 15px;
+
+    border-radius: 16px;
+
+    > div {
+      padding: 20px;
+    }
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .greeting-content,
+  .skills-shell {
+    width: calc(100% - 22px);
+  }
+
+  .greeting-heading {
+    font-size: 2.4rem;
+  }
+
+  .expertise-row span {
+    font-size: 0.7rem;
+  }
+
+  .professional-links {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-card,
+  .cta-buttons .btn {
+    transition: none;
+  }
+
+  .skill-card:hover,
+  .cta-buttons .btn:hover {
+    transform: none;
+  }
+}

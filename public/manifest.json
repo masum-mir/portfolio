@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Masum Portfolio",
+  "name": "Md Masum Mir | Software Engineer & Deep Learning / Machine Learning Researcher",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0f2a56",
+  "background_color": "#f7f9fc"
 }
