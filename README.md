@@ -131,18 +131,7 @@ src/pages/home/
 ```
 
 This keeps each page and its styling together and makes the project easier to maintain.
-
-## Responsive Design
-
-The portfolio is designed to work across:
-
-- Desktop
-- Laptop
-- Tablet
-- Mobile
-
-Layouts, typography, cards, navigation, images, and spacing adapt to different screen sizes.
-
+ 
 ## Contact
 
 **Md Masum**
