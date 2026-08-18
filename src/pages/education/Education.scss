@@ -1,159 +1,48 @@
 @import "../../globalColor";
 
-$education-max-width: 1180px;
+$max-width: 1180px;
 $desktop-side-space: 40px;
 $mobile-side-space: 28px;
 
 .education-page {
   min-height: 100vh;
-
-  padding: 76px 0 96px;
-
+  padding: 72px 0 96px;
   background: $bg-light;
 }
 
 .education-wrapper {
-  width: min($education-max-width, calc(100% - $desktop-side-space));
-
+  width: min($max-width, calc(100% - $desktop-side-space));
   margin: 0 auto;
 }
 
-/* =========================================================
-   INTRO
-========================================================= */
-
-.education-intro {
-  width: 100%;
-
-  margin: 0 0 58px;
-
-  .page-eyebrow {
-    display: block;
-
-    margin: 0;
-  }
+.page-heading-row {
+  margin-bottom: 46px;
 
   h1 {
-    width: 100%;
-    max-width: 1000px;
-
-    margin: 10px 0 0;
-
+    margin: 0;
     color: $text-dark;
-
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
-
-    line-height: 1.08;
-
-    letter-spacing: -0.045em;
-  }
-
-  p {
-    width: 100%;
-    max-width: none;
-
-    margin: 18px 0 0;
-
-    color: $text-medium;
-
-    font-size: 1rem;
-    line-height: 1.75;
-
-    text-align: justify;
-    text-align-last: left;
-    text-justify: inter-word;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 760;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
   }
 }
-
-/* =========================================================
-   LABELS
-========================================================= */
-
-.page-eyebrow,
-.section-kicker {
-  color: $secondary-color;
-
-  font-size: 0.75rem;
-  font-weight: 800;
-
-  line-height: 1.4;
-
-  letter-spacing: 0.12em;
-
-  text-transform: uppercase;
-}
-
-/* =========================================================
-   EDUCATION SECTION
-========================================================= */
-
-.education-section {
-  width: 100%;
-
-  margin-top: 56px;
-}
-
-/* =========================================================
-   SECTION HEADING
-========================================================= */
-
-.education-heading {
-  width: 100%;
-
-  margin-bottom: 26px;
-
-  h2 {
-    margin: 6px 0 0;
-
-    color: $text-dark;
-
-    font-size: 32px;
-    font-weight: 750;
-
-    line-height: 1.15;
-
-    letter-spacing: -0.035em;
-  }
-}
-
-/* =========================================================
-   EDUCATION LIST
-========================================================= */
 
 .education-list {
-  width: 100%;
-
   display: grid;
-
   gap: 16px;
 }
 
-/* =========================================================
-   DEGREE CARD
-========================================================= */
-
 .degree-card {
-  width: 100%;
-
   display: grid;
-
-  grid-template-columns:
-    76px
-    minmax(0, 1fr);
-
+  grid-template-columns: 76px minmax(0, 1fr);
   align-items: flex-start;
-
   gap: 24px;
-
   padding: 28px;
-
   border: 1px solid $border-color;
-  border-radius: 19px;
-
-  background: #fff;
-
+  border-radius: 18px;
+  background: $bg-white;
   box-shadow: $shadow-sm;
-
   transition:
     transform 0.18s ease,
     box-shadow 0.18s ease,
@@ -161,281 +50,112 @@ $mobile-side-space: 28px;
 
   &:hover {
     transform: translateY(-2px);
-
     border-color: #cad6e6;
-
     box-shadow: $shadow-md;
   }
 }
 
-/* =========================================================
-   UNIVERSITY LOGO
-========================================================= */
-
 .education-logo {
   width: 72px;
   height: 72px;
-
   display: grid;
-
   place-items: center;
-
   padding: 8px;
-
   overflow: hidden;
-
   border: 1px solid $border-color;
   border-radius: 15px;
-
-  background: #f8fafc;
+  background: $bg-light;
 
   img {
-    display: block;
-
     width: 100%;
     height: 100%;
-
     object-fit: contain;
   }
 }
 
-/* =========================================================
-   DEGREE CONTENT
-========================================================= */
-
 .degree-content {
-  width: 100%;
   min-width: 0;
-}
 
-/* =========================================================
-   DEGREE TOP
-========================================================= */
+  > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 17px;
+    color: $secondary-color;
+    font-size: 0.82rem;
+    font-weight: 750;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+
+  ul {
+    margin: 18px 0 0;
+    padding-left: 20px;
+    color: $text-medium;
+    font-size: 0.89rem;
+    line-height: 1.68;
+
+    li + li {
+      margin-top: 6px;
+    }
+  }
+}
 
 .degree-topline {
-  width: 100%;
-
   display: flex;
-
   align-items: flex-start;
   justify-content: space-between;
-
   gap: 24px;
+
+  h2 {
+    margin: 0;
+    color: $text-dark;
+    font-size: 1.18rem;
+    font-weight: 750;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+  }
 }
-
-.degree-heading-content {
-  min-width: 0;
-}
-
-/* =========================================================
-   DEGREE TITLE
-========================================================= */
-
-.degree-topline h3 {
-  margin: 0;
-
-  color: $text-dark;
-
-  font-size: 1.2rem;
-  font-weight: 750;
-
-  line-height: 1.4;
-
-  letter-spacing: -0.02em;
-}
-
-/* =========================================================
-   DEGREE / UNIVERSITY NAME
-========================================================= */
 
 .degree-name {
   margin: 5px 0 0;
-
   color: $secondary-color;
-
   font-size: 0.9rem;
   font-weight: 700;
-
   line-height: 1.5;
 }
 
-/* =========================================================
-   DATE
-========================================================= */
-
 .degree-period {
   flex: 0 0 auto;
-
   padding: 6px 10px;
-
   border-radius: 9px;
-
   color: $text-medium;
-
-  background: #f1f5f9;
-
+  background: #eef3f8;
   font-size: 0.76rem;
   font-weight: 700;
-
-  line-height: 1.4;
-
   white-space: nowrap;
 }
 
-/* =========================================================
-   DEGREE DESCRIPTION
-========================================================= */
-
-.degree-content ul {
-  width: 100%;
-
-  margin: 18px 0 0;
-
-  padding-left: 20px;
-
-  color: $text-medium;
-
-  font-size: 0.9rem;
-  line-height: 1.72;
-
-  text-align: justify;
-  text-align-last: left;
-  text-justify: inter-word;
-
-  li + li {
-    margin-top: 7px;
-  }
-}
-
-/* =========================================================
-   UNIVERSITY LINK
-========================================================= */
-
-.degree-content a {
-  width: fit-content;
-
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 5px;
-
-  margin-top: 17px;
-
-  color: $secondary-color;
-
-  text-decoration: none;
-
-  font-size: 0.82rem;
-  font-weight: 750;
-
-  transition: color 0.16s ease;
-
-  &:hover {
-    text-decoration: underline;
-
-    text-underline-offset: 4px;
-  }
-}
-
-/* =========================================================
-   SMALL DESKTOP
-========================================================= */
-
-@media (max-width: 1050px) {
-  .education-intro h1 {
-    max-width: 900px;
-  }
-
-  .degree-card {
-    gap: 22px;
-
-    padding: 25px;
-  }
-}
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 760px) {
+@media (max-width: 680px) {
   .education-page {
-    padding: 56px 0 72px;
+    padding: 48px 0 64px;
   }
 
   .education-wrapper {
     width: calc(100% - $mobile-side-space);
   }
 
-  .education-intro {
-    margin-bottom: 44px;
-
-    h1 {
-      max-width: none;
-
-      font-size: clamp(2rem, 7vw, 2.8rem);
-    }
+  .page-heading-row {
+    margin-bottom: 38px;
   }
-
-  .education-section {
-    margin-top: 44px;
-  }
-
-  .degree-card {
-    grid-template-columns: 64px minmax(0, 1fr);
-
-    gap: 18px;
-
-    padding: 22px;
-  }
-
-  .education-logo {
-    width: 62px;
-    height: 62px;
-  }
-
-  .degree-topline {
-    gap: 16px;
-  }
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-  .education-page {
-    padding: 48px 0 64px;
-  }
-
-  /* INTRO */
-
-  .education-intro {
-    margin-bottom: 40px;
-
-    h1 {
-      font-size: clamp(1.95rem, 8vw, 2.5rem);
-
-      line-height: 1.13;
-    }
-
-    p {
-      margin-top: 15px;
-
-      font-size: 0.94rem;
-      line-height: 1.68;
-
-      text-align: left;
-    }
-  }
-
-  /* CARD */
 
   .degree-card {
     grid-template-columns: 1fr;
-
     gap: 17px;
-
     padding: 21px;
   }
 
@@ -446,24 +166,13 @@ $mobile-side-space: 28px;
 
   .degree-topline {
     display: grid;
-
     gap: 12px;
   }
 
   .degree-period {
     width: fit-content;
   }
-
-  .degree-content ul {
-    font-size: 0.88rem;
-
-    text-align: left;
-  }
 }
-
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
 
 @media (max-width: 380px) {
   .education-wrapper {
@@ -472,18 +181,9 @@ $mobile-side-space: 28px;
 
   .degree-card {
     padding: 18px;
-
     border-radius: 16px;
   }
-
-  .education-intro h1 {
-    font-size: 1.85rem;
-  }
 }
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   .degree-card {

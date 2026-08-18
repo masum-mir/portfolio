@@ -7,15 +7,20 @@ $mobile-side-space: 28px;
 .greeting-content,
 .skills-shell {
   width: min($home-max-width, calc(100% - $desktop-side-space));
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .greeting-container {
   min-height: calc(100vh - 72px);
+
   display: flex;
   align-items: center;
-  padding: 76px 0 86px;
+
+  padding: 72px 0 82px;
 
   background:
     radial-gradient(
@@ -29,15 +34,15 @@ $mobile-side-space: 28px;
 .greeting-content {
   display: grid;
   grid-template-columns:
-    minmax(0, 1.25fr)
-    minmax(320px, 0.75fr);
+    minmax(0, 1.2fr)
+    minmax(320px, 0.8fr);
 
   align-items: center;
+
   gap: 64px;
 }
 
 .greeting-text-section {
-  width: 100%;
   min-width: 0;
 }
 
@@ -46,7 +51,7 @@ $mobile-side-space: 28px;
 
   color: $secondary-color;
 
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
 }
 
@@ -55,7 +60,7 @@ $mobile-side-space: 28px;
 
   color: $text-dark;
 
-  font-size: clamp(3.1rem, 5.4vw, 5rem);
+  font-size: clamp(3rem, 5.4vw, 5rem);
   line-height: 1;
 
   letter-spacing: -0.055em;
@@ -69,56 +74,25 @@ $mobile-side-space: 28px;
   color: #2e4262;
 
   font-size: clamp(1.05rem, 1.7vw, 1.35rem);
-  line-height: 1.45;
-
   font-weight: 700;
+  line-height: 1.45;
 
   letter-spacing: -0.02em;
 }
 
 .greeting-description {
-  width: 100%;
-  max-width: 700px;
+  max-width: 680px;
 
-  margin: 18px 0 0;
+  margin: 17px 0 0;
 
   color: $text-medium;
 
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.72;
 }
 
 /* =========================================================
-   EXPERTISE TAGS
-========================================================= */
-
-.expertise-row {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 8px;
-
-  margin-top: 24px;
-
-  span {
-    display: inline-flex;
-    align-items: center;
-
-    padding: 7px 11px;
-
-    border: 1px solid #dce4ef;
-    border-radius: 999px;
-
-    background: #fff;
-    color: #485a73;
-
-    font-size: 0.76rem;
-    font-weight: 650;
-  }
-}
-
-/* =========================================================
-   CTA BUTTONS
+   ACTIONS
 ========================================================= */
 
 .cta-buttons {
@@ -127,31 +101,31 @@ $mobile-side-space: 28px;
 
   gap: 12px;
 
-  margin-top: 30px;
+  margin-top: 28px;
 
   .btn {
-    min-height: 48px;
+    min-height: 46px;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    gap: 9px;
+    gap: 8px;
 
-    padding: 12px 19px;
+    padding: 11px 18px;
 
-    border-radius: 12px;
+    border-radius: 11px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
 
     text-decoration: none;
-
-    font-size: 0.92rem;
-    font-weight: 700;
 
     transition:
       transform 0.16s ease,
       box-shadow 0.16s ease,
-      background 0.16s ease,
-      border-color 0.16s ease;
+      border-color 0.16s ease,
+      background 0.16s ease;
 
     &:hover {
       transform: translateY(-2px);
@@ -164,32 +138,21 @@ $mobile-side-space: 28px;
     color: #fff;
     background: $primary-color;
 
-    box-shadow: 0 11px 25px rgba($primary-color, 0.17);
-
-    &:hover {
-      box-shadow: 0 15px 34px rgba($primary-color, 0.22);
-    }
+    box-shadow: 0 10px 24px rgba($primary-color, 0.16);
   }
 
   .btn-secondary {
-    border: 1px solid #d7e0ec;
+    border: 1px solid $border-color;
 
     color: $primary-color;
-    background: #fff;
+    background: $bg-white;
 
     &:hover {
-      border-color: #c8d4e4;
-
       background: #f9fbfd;
-
       box-shadow: $shadow-sm;
     }
   }
 }
-
-/* =========================================================
-   PROFESSIONAL LINKS
-========================================================= */
 
 .professional-links {
   display: flex;
@@ -198,7 +161,7 @@ $mobile-side-space: 28px;
 
   gap: 18px;
 
-  margin-top: 22px;
+  margin-top: 20px;
 
   a {
     display: inline-flex;
@@ -208,10 +171,10 @@ $mobile-side-space: 28px;
 
     color: $text-medium;
 
-    text-decoration: none;
-
     font-size: 0.84rem;
     font-weight: 650;
+
+    text-decoration: none;
 
     transition: color 0.16s ease;
 
@@ -222,7 +185,7 @@ $mobile-side-space: 28px;
 }
 
 /* =========================================================
-   PROFILE IMAGE
+   PROFILE
 ========================================================= */
 
 .greeting-image-section {
@@ -239,10 +202,10 @@ $mobile-side-space: 28px;
 
   padding: 10px;
 
-  border: 1px solid #dce4ef;
-  border-radius: 26px;
+  border: 1px solid $border-color;
+  border-radius: 24px;
 
-  background: #fff;
+  background: $bg-white;
 
   box-shadow: 0 28px 70px rgba(15, 42, 86, 0.12);
 }
@@ -254,7 +217,7 @@ $mobile-side-space: 28px;
 
   aspect-ratio: 4 / 4.35;
 
-  border-radius: 19px;
+  border-radius: 18px;
 
   background: #e8edf4;
 }
@@ -269,10 +232,6 @@ $mobile-side-space: 28px;
   object-position: center 22%;
 }
 
-/* =========================================================
-   PROFILE SUMMARY
-========================================================= */
-
 .profile-summary {
   display: flex;
   align-items: flex-end;
@@ -280,7 +239,7 @@ $mobile-side-space: 28px;
 
   gap: 16px;
 
-  padding: 17px 10px 8px;
+  padding: 16px 10px 8px;
 
   > div:first-child {
     display: flex;
@@ -290,12 +249,11 @@ $mobile-side-space: 28px;
   span {
     color: $text-light;
 
-    font-size: 0.68rem;
+    font-size: 0.66rem;
     font-weight: 700;
 
-    text-transform: uppercase;
-
     letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   strong {
@@ -303,7 +261,7 @@ $mobile-side-space: 28px;
 
     color: $text-dark;
 
-    font-size: 0.95rem;
+    font-size: 0.94rem;
   }
 
   small {
@@ -311,7 +269,7 @@ $mobile-side-space: 28px;
 
     color: $text-medium;
 
-    font-size: 0.75rem;
+    font-size: 0.74rem;
   }
 }
 
@@ -323,116 +281,49 @@ $mobile-side-space: 28px;
   border-radius: 9px;
 
   color: $secondary-color;
-
   background: rgba($secondary-color, 0.08);
 
-  font-size: 0.7rem;
+  font-size: 0.69rem;
   font-weight: 700;
 }
 
 /* =========================================================
-   SKILLS SECTION
+   SKILLS
 ========================================================= */
 
 .skills-container {
-  padding: 84px 0 96px;
+  padding: 78px 0 92px;
 
   border-top: 1px solid $border-color;
 
-  background: #fff;
+  background: $bg-white;
 }
 
-.skills-shell {
-  display: flex;
-  flex-direction: column;
-
-  align-items: stretch;
-}
-
-/* =========================================================
-   SKILLS INTRO
-========================================================= */
-
-.skills-intro {
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  margin: 0 0 34px;
-
-  text-align: left;
-
-  .page-eyebrow {
-    margin: 0;
-  }
+.skills-heading {
+  margin-bottom: 28px;
 
   h2 {
-    width: 100%;
-    max-width: 980px;
-
-    margin: 10px 0 0;
+    margin: 0;
 
     color: $text-dark;
 
-    font-size: clamp(2rem, 3.2vw, 2.85rem);
-    line-height: 1.13;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 760;
+    line-height: 1.15;
 
-    letter-spacing: -0.04em;
-  }
-
-  p {
-    width: 100%;
-
-    margin: 14px 0 0;
-
-    color: $text-medium;
-
-    font-size: 1rem;
-    line-height: 1.72;
+    letter-spacing: -0.035em;
   }
 }
-
-.page-eyebrow {
-  display: block;
-
-  color: $secondary-color;
-
-  font-size: 0.75rem;
-  font-weight: 800;
-
-  line-height: 1.4;
-
-  letter-spacing: 0.12em;
-
-  text-transform: uppercase;
-}
-
-/* =========================================================
-   SKILLS GRID
-========================================================= */
 
 .skills-grid {
-  width: 100%;
-
   display: grid;
-
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  align-items: stretch;
 
   gap: 18px;
 }
 
-/* =========================================================
-   SKILL CARD
-========================================================= */
-
 .skill-card {
-  width: 100%;
   min-width: 0;
-  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -457,16 +348,12 @@ $mobile-side-space: 28px;
     box-shadow: $shadow-md;
   }
 
-  &.research-card {
-    background: linear-gradient(180deg, #f8fbff 0%, #f5f8fe 100%);
-  }
-
   h3 {
     margin: 0;
 
     color: $text-dark;
 
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.35;
 
     letter-spacing: -0.02em;
@@ -474,12 +361,12 @@ $mobile-side-space: 28px;
 
   ul {
     margin: 18px 0 0;
-    padding-left: 19px;
+    padding-left: 18px;
 
     color: $text-medium;
 
-    font-size: 0.86rem;
-    line-height: 1.66;
+    font-size: 0.85rem;
+    line-height: 1.65;
 
     li + li {
       margin-top: 7px;
@@ -487,14 +374,9 @@ $mobile-side-space: 28px;
   }
 }
 
-/* =========================================================
-   SKILL TAGS
-========================================================= */
-
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
 
   gap: 7px;
 
@@ -511,8 +393,8 @@ $mobile-side-space: 28px;
     border: 1px solid #dbe4ef;
     border-radius: 999px;
 
-    background: #fff;
     color: #495b75;
+    background: $bg-white;
 
     font-size: 0.68rem;
     font-weight: 700;
@@ -520,69 +402,7 @@ $mobile-side-space: 28px;
 }
 
 /* =========================================================
-   ROLE FOCUS
-========================================================= */
-
-.focus-strip {
-  width: 100%;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  margin-top: 20px;
-
-  gap: 1px;
-
-  overflow: hidden;
-
-  border: 1px solid #1e3358;
-  border-radius: 18px;
-
-  background: #1e3358;
-
-  > div {
-    min-width: 0;
-
-    padding: 23px;
-
-    background: $primary-color;
-  }
-
-  span {
-    display: block;
-
-    color: #7fa8ff;
-
-    font-size: 0.68rem;
-    font-weight: 800;
-
-    letter-spacing: 0.08em;
-  }
-
-  strong {
-    display: block;
-
-    margin-top: 9px;
-
-    color: #fff;
-
-    font-size: 0.95rem;
-    line-height: 1.35;
-  }
-
-  p {
-    margin: 8px 0 0;
-
-    color: #bac7dc;
-
-    font-size: 0.79rem;
-    line-height: 1.55;
-  }
-}
-
-/* =========================================================
-   LAPTOP / SMALL DESKTOP
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width: 1100px) {
@@ -599,51 +419,33 @@ $mobile-side-space: 28px;
   }
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
-
 @media (max-width: 900px) {
   .greeting-container {
     min-height: auto;
 
-    padding: 66px 0 74px;
+    padding: 64px 0 72px;
   }
 
   .greeting-content {
     grid-template-columns: 1fr;
 
-    gap: 46px;
-  }
-
-  .greeting-text-section {
-    width: 100%;
-    max-width: 760px;
+    gap: 44px;
   }
 
   .greeting-image-section {
-    width: 100%;
     max-width: 370px;
 
     justify-self: start;
   }
 
   .skills-container {
-    padding: 74px 0 82px;
+    padding: 68px 0 78px;
   }
 
   .skills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .focus-strip {
-    grid-template-columns: 1fr;
-  }
 }
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 640px) {
   .greeting-content,
@@ -652,38 +454,27 @@ $mobile-side-space: 28px;
   }
 
   .greeting-container {
-    padding: 48px 0 60px;
+    padding: 46px 0 58px;
   }
 
   .greeting-content {
-    gap: 36px;
-  }
-
-  .intro-label {
-    font-size: 0.92rem;
+    gap: 34px;
   }
 
   .greeting-heading {
     font-size: clamp(2.5rem, 13vw, 3.8rem);
-    line-height: 1.04;
   }
 
   .career-title {
     margin-top: 15px;
 
-    font-size: 1.03rem;
-    line-height: 1.45;
+    font-size: 1.02rem;
   }
 
   .greeting-description {
-    margin-top: 15px;
+    margin-top: 14px;
 
-    font-size: 0.95rem;
-    line-height: 1.68;
-  }
-
-  .expertise-row {
-    margin-top: 20px;
+    font-size: 0.94rem;
   }
 
   .cta-buttons {
@@ -691,67 +482,26 @@ $mobile-side-space: 28px;
 
     width: 100%;
 
-    margin-top: 25px;
+    margin-top: 24px;
 
     .btn {
       width: 100%;
     }
   }
 
-  .professional-links {
-    gap: 14px;
-
-    margin-top: 20px;
-  }
-
-  .greeting-image-section {
-    max-width: 100%;
-  }
-
-  .profile-card {
-    border-radius: 20px;
-  }
-
-  .profile-image-wrap {
-    border-radius: 15px;
-  }
-
   .profile-summary {
     flex-direction: column;
-
     align-items: flex-start;
 
-    gap: 12px;
+    gap: 11px;
   }
-
-  /* Skills */
 
   .skills-container {
-    padding: 62px 0 70px;
+    padding: 58px 0 66px;
   }
 
-  .skills-intro {
-    margin-bottom: 28px;
-
-    h2 {
-      max-width: none;
-
-      font-size: clamp(1.75rem, 8vw, 2.25rem);
-      line-height: 1.16;
-    }
-
-    p {
-      max-width: none;
-
-      margin-top: 13px;
-
-      font-size: 0.94rem;
-      line-height: 1.68;
-    }
-  }
-
-  .page-eyebrow {
-    font-size: 0.69rem;
+  .skills-heading {
+    margin-bottom: 22px;
   }
 
   .skills-grid {
@@ -765,34 +515,12 @@ $mobile-side-space: 28px;
 
     border-radius: 16px;
   }
-
-  .focus-strip {
-    margin-top: 15px;
-
-    border-radius: 16px;
-
-    > div {
-      padding: 20px;
-    }
-  }
 }
-
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
 
 @media (max-width: 380px) {
   .greeting-content,
   .skills-shell {
     width: calc(100% - 22px);
-  }
-
-  .greeting-heading {
-    font-size: 2.4rem;
-  }
-
-  .expertise-row span {
-    font-size: 0.7rem;
   }
 
   .professional-links {
@@ -802,10 +530,6 @@ $mobile-side-space: 28px;
     gap: 10px;
   }
 }
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
   .skill-card,

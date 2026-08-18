@@ -15,22 +15,14 @@ import "./Contact.scss";
 const Contact = () => (
   <main className="contact-container">
     <div className="contact-content">
-      <header className="contact-intro">
-        <span className="page-eyebrow">Contact</span>
-        <p>
-          I’m open to opportunities in software engineering, machine learning,
-          and deep learning, as well as research collaborations related to IoT,
-          networking, and intelligent systems.
-        </p>
-      </header>
+      
 
       <div className="contact-grid">
         <section
           className="contact-info-section"
           aria-labelledby="contact-info-title"
         >
-          <div className="contact-section-heading">
-            <span className="section-kicker">Get in Touch</span>
+          <div className="contact-section-heading"> 
 
             <h2 id="contact-info-title">Contact Information</h2>
           </div>

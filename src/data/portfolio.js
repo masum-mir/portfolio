@@ -1,3 +1,16 @@
+const homePageData = {
+  name: "Md Masum",
+  careerTitle:
+    "Software Engineer · Machine Learning & Deep Learning Researcher",
+  description:
+    "I build reliable software and work on machine learning, deep learning, IoT, and networked-system research.",
+  currentRole: "Research Assistant",
+  organization: "DHMAINetRG · Dhaka",
+  publicationText: "2 Publications · 2026",
+  github: "https://github.com/masum-mir",
+  linkedin: "https://www.linkedin.com/in/md-masum-mir/",
+};
+
 const skills = {
   data: [
     {
@@ -5,9 +18,7 @@ const skills = {
       fileName: "FullStackImg",
       skills: [
         "Build full-stack applications with React.js and Spring Boot.",
-        "Design maintainable REST APIs and secure authentication flows.",
-        "Work with relational databases, Git, Docker, and Linux-based development workflows.",
-        "Focus on clean code, debugging, performance, and practical problem solving.",
+        "Design REST APIs, authentication flows, and database-backed systems.",
       ],
       softwareSkills: [
         { skillName: "Java", fontAwesomeClassname: "logos-java", style: { color: "#007396" } },
@@ -24,10 +35,8 @@ const skills = {
       title: "Engineering Tools & Deployment",
       fileName: "CloudInfraImg",
       skills: [
-        "Use Docker to create reproducible development and deployment environments.",
-        "Manage source control, collaboration, and release workflows with Git and GitHub.",
-        "Work with MySQL and application configuration across local and hosted environments.",
-        "Develop and troubleshoot applications in Linux-based environments.",
+        "Use Docker, Git, GitHub, and Linux for development and deployment workflows.",
+        "Configure and troubleshoot applications across local and containerized environments.",
       ],
       softwareSkills: [
         { skillName: "Docker", fontAwesomeClassname: "simple-icons:docker", style: { color: "#1488C6" } },
@@ -45,10 +54,8 @@ const mlResearch = {
       title: "Deep Learning & Machine Learning",
       fileName: "DataScienceImg",
       skills: [
-        "Prepare, analyze, and visualize structured datasets for machine learning experiments.",
-        "Train and evaluate predictive models using reproducible experimental workflows.",
-        "Use Python, NumPy, Pandas, Scikit-learn, and Matplotlib for data-driven problem solving.",
-        "Apply deep learning and machine learning methods to IoT, networked systems, edge intelligence, and research problems.",
+        "Prepare data, train models, and evaluate machine learning experiments using Python.",
+        "Apply machine learning and deep learning to IoT and networked-system research.",
       ],
       softwareSkills: [
         { skillName: "Python", fontAwesomeClassname: "logos-python", style: { color: "#3776AB" } },
@@ -72,9 +79,8 @@ const degrees = {
       alt_name: "East West University",
       duration: "2023 – Present",
       descriptions: [
-        "Studying Computer Science and Engineering with growing focus on deep learning and machine learning.",
-        "Combining academic coursework with software engineering projects and research activities.",
-        "Participating in technical workshops, seminars, and collaborative academic work.",
+        "Studying Computer Science and Engineering with a focus on software engineering, machine learning, and research.",
+        "Combining academic coursework with practical projects and research activities.",
       ],
       website_link: "https://www.ewubd.edu/",
     },
@@ -166,100 +172,126 @@ const ProjectsData = {
   data: [
     {
       id: "1",
-      name: "TrinityByte IT Website",
-      createdAt: "Apr 19, 2025",
-      url: "https://github.com/masum-mir/trinitybyte",
+      name: "Oppzy",
+      createdAt: "2026",
+      url: "https://github.com/masum-mir/Oppzy",
       description:
-        "Responsive IT company website built with React.js and Tailwind CSS, with modern layouts and interactive UI components.",
-      category: "Frontend",
+        "A full-stack internship and research matching platform with role-based dashboards, JWT authentication, profile-based matching, application management, and Dockerized deployment.",
+      category: "Software Engineering",
       isFork: false,
       languages: [
         { name: "React.js", iconifyClass: "logos-react" },
-        { name: "Tailwind CSS", iconifyClass: "logos-tailwindcss-icon" },
+        { name: "Spring Boot", iconifyClass: "simple-icons:springboot" },
+        { name: "MySQL", iconifyClass: "logos-mysql" },
+        { name: "Docker", iconifyClass: "logos-docker-icon" },
       ],
     },
     {
       id: "2",
-      name: "To-Do Application",
-      createdAt: "Jan 19, 2025",
-      url: "https://github.com/masum-mir/TodoApplication",
+      name: "CQI",
+      createdAt: "2026",
+      url: "https://github.com/masum-mir/CQI",
       description:
-        "Full-stack task management application with Spring Boot and React.js supporting practical CRUD workflows.",
-      category: "Full Stack",
+        "A Continuous Quality Improvement platform for managing academic course files, faculty workflows, document submissions, reviews, and administrative processes.",
+      category: "Software Engineering",
       isFork: false,
       languages: [
-        { name: "Java", iconifyClass: "logos-java" },
-        { name: "Spring Boot", iconifyClass: "simple-icons:springboot" },
         { name: "React.js", iconifyClass: "logos-react" },
+        { name: "Django REST", iconifyClass: "logos-django-icon" },
+        { name: "MongoDB", iconifyClass: "logos-mongodb-icon" },
+        { name: "Docker", iconifyClass: "logos-docker-icon" },
       ],
     },
     {
       id: "3",
-      name: "Developer Portfolio",
-      createdAt: "2026 Refresh",
-      url: "https://github.com/masum-mir/portfolio",
+      name: "Mess Management System",
+      createdAt: "2026",
+      url: "https://github.com/masum-mir/mess-management-system",
       description:
-        "Personal portfolio focused on software engineering, deep learning, machine learning, and research experience.",
-      category: "Frontend",
+        "A web-based mess management application designed to organize day-to-day management activities and simplify common administrative workflows.",
+      category: "Software Engineering",
       isFork: false,
       languages: [
-        { name: "React.js", iconifyClass: "logos-react" },
-        { name: "SCSS", iconifyClass: "logos-sass" },
+        { name: "HTML5", iconifyClass: "logos-html-5" },
+        { name: "CSS3", iconifyClass: "logos-css-3" },
+        { name: "JavaScript", iconifyClass: "logos-javascript" },
       ],
     },
     {
       id: "4",
-      name: "Contract Manager",
-      createdAt: "Jun 11, 2024",
-      url: "https://github.com/masum-mir/ContractManager",
+      name: "To-Do Application",
+      createdAt: "2025",
+      url: "https://github.com/masum-mir/TodoApplication",
       description:
-        "Spring Boot application for managing contracts, clients, and records through structured REST-based workflows.",
-      category: "Backend",
+        "A full-stack task management application built with Spring Boot and React.js, supporting practical CRUD workflows and task organization.",
+      category: "Software Engineering",
       isFork: false,
       languages: [
         { name: "Java", iconifyClass: "logos-java" },
         { name: "Spring Boot", iconifyClass: "simple-icons:springboot" },
-        { name: "MySQL", iconifyClass: "logos-mysql" },
+        { name: "React.js", iconifyClass: "logos-react" },
       ],
     },
     {
       id: "5",
-      name: "Chat Engine",
-      createdAt: "May 13, 2024",
-      url: "https://github.com/masum-mir/ChatEngine",
+      name: "TwoTierDTN",
+      createdAt: "2026",
+      url: "https://github.com/masum-mir/TwoTierDTN",
       description:
-        "Java socket-based terminal chat application supporting real-time communication between multiple users.",
-      category: "Systems",
-      isFork: false,
-      languages: [{ name: "Java", iconifyClass: "logos-java" }],
-    },
-    {
-      id: "6",
-      name: "Library Management System",
-      createdAt: "Dec 2, 2023",
-      url: "https://github.com/masum-mir/library_management_system",
-      description:
-        "Library management system built with Java Spring MVC and Thymeleaf for books, members, and loan workflows.",
-      category: "Web App",
+        "A Java-based networking research project focused on delay-tolerant networking, routing, forwarding behaviour, and simulation-based evaluation.",
+      category: "Research / Networking",
       isFork: false,
       languages: [
         { name: "Java", iconifyClass: "logos-java" },
-        { name: "Spring MVC", iconifyClass: "simple-icons:spring" },
-        { name: "Thymeleaf", iconifyClass: "simple-icons:thymeleaf" },
+        { name: "DTN", iconifyClass: "mdi:access-point-network" },
+        { name: "The ONE Simulator", iconifyClass: "mdi:network-outline" },
+      ],
+    },
+    {
+      id: "6",
+      name: "CCN-DA",
+      createdAt: "2026",
+      url: "https://github.com/masum-mir/CCN-DA",
+      description:
+        "A research-oriented Content-Centric Networking project focused on data forwarding, caching, and communication behaviour in CCN environments.",
+      category: "Research / Networking",
+      isFork: false,
+      languages: [
+        { name: "Python", iconifyClass: "logos-python" },
+        { name: "CCN", iconifyClass: "mdi:lan-connect" },
+        { name: "Networking", iconifyClass: "mdi:network" },
+      ],
+    },
+    {
+      id: "7",
+      name: "Machine Learning Journey",
+      createdAt: "2026",
+      url: "https://github.com/masum-mir/machine-learning-journey",
+      description:
+        "A collection of practical machine learning experiments and projects covering data preprocessing, model development, evaluation, and applied learning.",
+      category: "AI / Machine Learning",
+      isFork: false,
+      languages: [
+        { name: "Python", iconifyClass: "logos-python" },
+        { name: "Jupyter Notebook", iconifyClass: "logos-jupyter" },
+        { name: "Scikit-learn", iconifyClass: "simple-icons:scikitlearn" },
       ],
     },
   ],
 };
 
 const contactPageData = {
-  contactSection: {
-    title: "Contact Me",
-    description:
-      "Open to software engineering, deep learning, machine learning, and research opportunities.",
-  },
+  email: "masummir773@gmail.com",
+  phone: "+8801782448900",
+  phoneDisplay: "+880 178 244 8900",
+  location: "Dhaka, Bangladesh",
+  linkedin: "https://www.linkedin.com/in/md-masum-mir/",
+  github: "https://github.com/masum-mir",
+  facebook: "https://www.facebook.com/md.masum.rr",
 };
 
 export {
+  homePageData,
   skills,
   mlResearch,
   competitiveSites,

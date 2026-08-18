@@ -4,155 +4,123 @@ $projects-max-width: 1180px;
 $desktop-side-space: 40px;
 $mobile-side-space: 28px;
 
+/* =========================================================
+   PAGE
+========================================================= */
+
 .projects-page {
   min-height: 100vh;
-
-  padding: 76px 0 96px;
-
+  padding: 72px 0 96px;
   background: $bg-light;
 }
 
 .projects-wrapper {
   width: min($projects-max-width, calc(100% - $desktop-side-space));
-
   margin: 0 auto;
 }
 
-/* =========================================================
-   PAGE INTRO
-========================================================= */
-
-.projects-intro {
-  width: 100%;
-
-  margin: 0 0 58px;
-
-  .page-eyebrow {
-    display: block;
-
-    margin: 0;
-  }
-
-  h1 {
-    width: 100%;
-    max-width: 1050px;
-
-    margin: 10px 0 0;
-
-    color: $text-dark;
-
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
-
-    line-height: 1.08;
-
-    letter-spacing: -0.045em;
-  }
-
-  p {
-    width: 100%;
-    max-width: none;
-
-    margin: 18px 0 0;
-
-    color: $text-medium;
-
-    font-size: 1rem;
-    line-height: 1.75;
-
-    text-align: justify;
-    text-align-last: left;
-    text-justify: inter-word;
-  }
-}
-
-/* =========================================================
-   EYEBROW / SECTION KICKER
-========================================================= */
-
-.page-eyebrow,
-.section-kicker {
-  color: $secondary-color;
-
-  font-size: 0.75rem;
-  font-weight: 800;
-
-  line-height: 1.4;
-
-  letter-spacing: 0.12em;
-
-  text-transform: uppercase;
-}
-
-/* =========================================================
-   PROJECTS SECTION
-========================================================= */
-
 .projects-section {
   width: 100%;
-
-  margin-top: 56px;
 }
 
 /* =========================================================
-   SECTION HEADING
+   PAGE HEADING
 ========================================================= */
 
 .projects-heading-row {
-  width: 100%;
-
   display: flex;
-
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
 
   gap: 24px;
+  margin-bottom: 46px;
 
-  margin-bottom: 26px;
-
-  h2 {
-    margin: 6px 0 0;
+  h1 {
+    margin: 0;
 
     color: $text-dark;
 
-    font-size: 32px;
-    font-weight: 750;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 760;
+    line-height: 1.1;
 
-    line-height: 1.15;
-
-    letter-spacing: -0.035em;
+    letter-spacing: -0.04em;
   }
 }
-
-/* =========================================================
-   VIEW ALL REPOSITORIES
-========================================================= */
 
 .github-all-link {
   flex-shrink: 0;
 
   display: inline-flex;
-
   align-items: center;
 
   gap: 6px;
 
-  padding-bottom: 3px;
-
   color: $secondary-color;
-
-  text-decoration: none;
 
   font-size: 0.84rem;
   font-weight: 700;
 
-  white-space: nowrap;
+  text-decoration: none;
 
-  transition: color 0.16s ease;
+  transition:
+    color 0.16s ease,
+    transform 0.16s ease;
 
   &:hover {
     text-decoration: underline;
-
     text-underline-offset: 4px;
+  }
+
+  span {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================================
+   PROJECT GROUPS
+========================================================= */
+
+.project-groups {
+  display: flex;
+  flex-direction: column;
+
+  gap: 56px;
+}
+
+.project-group {
+  width: 100%;
+}
+
+.project-group-title {
+  position: relative;
+
+  margin: 0 0 22px;
+  padding-left: 14px;
+
+  color: $text-dark;
+
+  font-size: 1.55rem;
+  font-weight: 750;
+  line-height: 1.2;
+
+  letter-spacing: -0.025em;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 4px;
+    height: 70%;
+
+    border-radius: 999px;
+
+    background: $secondary-color;
+
+    transform: translateY(-50%);
   }
 }
 
@@ -164,10 +132,7 @@ $mobile-side-space: 28px;
   width: 100%;
 
   display: grid;
-
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  align-items: stretch;
 
   gap: 18px;
 }
@@ -177,19 +142,22 @@ $mobile-side-space: 28px;
 ========================================================= */
 
 .project-card {
-  width: 100%;
+  position: relative;
+
   min-width: 0;
-  min-height: 370px;
+  min-height: 360px;
 
   display: flex;
   flex-direction: column;
 
   padding: 24px;
 
+  overflow: hidden;
+
   border: 1px solid $border-color;
   border-radius: 18px;
 
-  background: #fff;
+  background: $bg-white;
 
   box-shadow: $shadow-sm;
 
@@ -198,12 +166,33 @@ $mobile-side-space: 28px;
     box-shadow 0.18s ease,
     border-color 0.18s ease;
 
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: $secondary-color;
+
+    opacity: 0;
+
+    transition: opacity 0.18s ease;
+  }
+
   &:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 
     border-color: #cbd6e4;
 
     box-shadow: $shadow-md;
+
+    &::after {
+      opacity: 1;
+    }
   }
 
   h3 {
@@ -213,7 +202,6 @@ $mobile-side-space: 28px;
 
     font-size: 1.16rem;
     font-weight: 750;
-
     line-height: 1.38;
 
     letter-spacing: -0.02em;
@@ -225,36 +213,23 @@ $mobile-side-space: 28px;
 ========================================================= */
 
 .project-card-top {
-  width: 100%;
-
   display: flex;
-
   align-items: flex-start;
   justify-content: space-between;
 
   gap: 12px;
 }
 
-/* =========================================================
-   PROJECT CATEGORY
-========================================================= */
-
 .project-category {
   color: $secondary-color;
 
   font-size: 0.67rem;
   font-weight: 800;
-
   line-height: 1.4;
 
   text-transform: uppercase;
-
   letter-spacing: 0.07em;
 }
-
-/* =========================================================
-   PROJECT DATE
-========================================================= */
 
 .project-date {
   flex-shrink: 0;
@@ -263,10 +238,7 @@ $mobile-side-space: 28px;
 
   font-size: 0.7rem;
   font-weight: 650;
-
   line-height: 1.4;
-
-  text-align: right;
 
   white-space: nowrap;
 }
@@ -279,10 +251,7 @@ $mobile-side-space: 28px;
   width: 44px;
   height: 44px;
 
-  flex-shrink: 0;
-
   display: grid;
-
   place-items: center;
 
   margin-top: 18px;
@@ -304,8 +273,6 @@ $mobile-side-space: 28px;
 ========================================================= */
 
 .project-description {
-  width: 100%;
-
   margin: 0;
 
   color: $text-medium;
@@ -313,9 +280,7 @@ $mobile-side-space: 28px;
   font-size: 0.88rem;
   line-height: 1.7;
 
-  text-align: justify;
-  text-align-last: left;
-  text-justify: inter-word;
+  text-align: left;
 }
 
 /* =========================================================
@@ -324,38 +289,41 @@ $mobile-side-space: 28px;
 
 .project-stack {
   display: flex;
-
   flex-wrap: wrap;
-
   align-items: center;
 
   gap: 7px;
 
   margin: auto 0 18px;
-
   padding-top: 23px;
 
   span {
     display: inline-flex;
-
     align-items: center;
 
     min-height: 28px;
 
     padding: 5px 9px;
 
-    border: 1px solid #dbe3ee;
+    border: 1px solid $border-color;
     border-radius: 999px;
 
-    color: #53627a;
+    color: $text-medium;
 
-    background: #f8fafc;
+    background: $bg-light;
 
     font-size: 0.69rem;
     font-weight: 650;
-
     line-height: 1.3;
+
+    transition:
+      border-color 0.16s ease,
+      background 0.16s ease;
   }
+}
+
+.project-card:hover .project-stack span {
+  border-color: rgba($secondary-color, 0.22);
 }
 
 /* =========================================================
@@ -366,23 +334,25 @@ $mobile-side-space: 28px;
   width: fit-content;
 
   display: inline-flex;
-
   align-items: center;
 
   gap: 5px;
 
   color: $secondary-color;
 
-  text-decoration: none;
-
   font-size: 0.82rem;
   font-weight: 750;
 
-  transition: color 0.16s ease;
+  text-decoration: none;
+
+  transition:
+    color 0.16s ease,
+    gap 0.16s ease;
 
   &:hover {
-    text-decoration: underline;
+    gap: 8px;
 
+    text-decoration: underline;
     text-underline-offset: 4px;
   }
 }
@@ -399,12 +369,6 @@ $mobile-side-space: 28px;
   .project-card {
     padding: 22px;
   }
-
-  .projects-intro {
-    h1 {
-      max-width: 950px;
-    }
-  }
 }
 
 /* =========================================================
@@ -413,25 +377,23 @@ $mobile-side-space: 28px;
 
 @media (max-width: 980px) {
   .projects-page {
-    padding: 66px 0 82px;
+    padding: 64px 0 82px;
   }
 
-  .projects-intro {
-    margin-bottom: 48px;
+  .projects-heading-row {
+    margin-bottom: 40px;
+  }
 
-    h1 {
-      max-width: 850px;
-    }
+  .project-groups {
+    gap: 48px;
   }
 
   .projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 16px;
   }
 
   .project-card {
-    min-height: 350px;
+    min-height: 345px;
   }
 }
 
@@ -447,28 +409,6 @@ $mobile-side-space: 28px;
   .projects-page {
     padding: 56px 0 72px;
   }
-
-  .projects-intro {
-    margin-bottom: 44px;
-
-    h1 {
-      max-width: none;
-
-      font-size: clamp(2rem, 7vw, 2.8rem);
-    }
-
-    p {
-      max-width: none;
-    }
-  }
-
-  .projects-section {
-    margin-top: 44px;
-  }
-
-  .projects-heading-row {
-    gap: 18px;
-  }
 }
 
 /* =========================================================
@@ -480,58 +420,33 @@ $mobile-side-space: 28px;
     padding: 48px 0 64px;
   }
 
-  /* ---------------------------
-     INTRO
-  --------------------------- */
-
-  .projects-intro {
-    margin-bottom: 40px;
-
-    h1 {
-      font-size: clamp(1.95rem, 8vw, 2.5rem);
-
-      line-height: 1.13;
-    }
-
-    p {
-      margin-top: 15px;
-
-      font-size: 0.94rem;
-      line-height: 1.68;
-
-      text-align: left;
-    }
-  }
-
-  /* ---------------------------
-     SECTION HEADER
-  --------------------------- */
-
   .projects-heading-row {
     display: grid;
-
     align-items: start;
 
     gap: 14px;
+    margin-bottom: 36px;
   }
 
   .github-all-link {
     width: fit-content;
   }
 
-  /* ---------------------------
-     PROJECT GRID
-  --------------------------- */
+  .project-groups {
+    gap: 42px;
+  }
+
+  .project-group-title {
+    margin-bottom: 16px;
+
+    font-size: 1.34rem;
+  }
 
   .projects-grid {
     grid-template-columns: 1fr;
 
     gap: 14px;
   }
-
-  /* ---------------------------
-     CARD
-  --------------------------- */
 
   .project-card {
     min-height: 0;
@@ -540,12 +455,11 @@ $mobile-side-space: 28px;
   }
 
   .project-description {
-    text-align: left;
+    font-size: 0.86rem;
   }
 
   .project-stack {
     margin-top: 4px;
-
     padding-top: 20px;
   }
 }
@@ -557,12 +471,6 @@ $mobile-side-space: 28px;
 @media (max-width: 380px) {
   .projects-wrapper {
     width: calc(100% - 22px);
-  }
-
-  .projects-intro {
-    h1 {
-      font-size: 1.85rem;
-    }
   }
 
   .project-card {
@@ -578,7 +486,7 @@ $mobile-side-space: 28px;
   }
 
   .project-date {
-    text-align: left;
+    white-space: normal;
   }
 }
 
@@ -587,7 +495,10 @@ $mobile-side-space: 28px;
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-  .project-card {
+  .project-card,
+  .project-card::after,
+  .project-link,
+  .project-stack span {
     transition: none;
   }
 
