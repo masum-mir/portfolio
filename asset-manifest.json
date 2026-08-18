@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.a719b4bf.css",
+    "main.js": "/portfolio/static/js/main.418064de.js",
+    "static/media/myimg.jpg": "/portfolio/static/media/myimg.a71014fb4a140f71c474.jpg",
+    "static/media/GoogleSans-Regular.ttf": "/portfolio/static/media/GoogleSans-Regular.bec0591b6a291c3ca895.ttf",
+    "static/media/GoogleSans-Medium.ttf": "/portfolio/static/media/GoogleSans-Medium.963c3e555aaada9ef8a9.ttf",
+    "static/media/GoogleSans-Bold.ttf": "/portfolio/static/media/GoogleSans-Bold.d907e4bf3e32637a636e.ttf",
+    "static/media/ewu-logo.png": "/portfolio/static/media/ewu-logo.7b2f2cbc42f552b70505.png",
+    "static/media/pridesys-it-ltd-logo.png": "/portfolio/static/media/pridesys-it-ltd-logo.145ef1e7158fb99851c1.png",
+    "static/media/dhmairg-logo.png": "/portfolio/static/media/dhmairg-logo.179e6bd571cb6f39f501.png",
+    "index.html": "/portfolio/index.html",
+    "main.a719b4bf.css.map": "/portfolio/static/css/main.a719b4bf.css.map",
+    "main.418064de.js.map": "/portfolio/static/js/main.418064de.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a719b4bf.css",
+    "static/js/main.418064de.js"
+  ]
+}
