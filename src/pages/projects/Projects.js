@@ -1,4 +1,5 @@
 import { ProjectsData } from "../../data/portfolio";
+import useScrollReveal from "../../hooks/useScrollReveal";
 import "./Projects.scss";
 
 const PROJECT_GROUPS = [
@@ -19,72 +20,96 @@ const PROJECT_GROUPS = [
   },
 ];
 
-const ProjectCard = ({ repo }) => (
-  <article className="project-card">
-    <div className="project-card-top">
-      <span className="project-category">
-        {repo.category || "Project"}
-      </span>
+const ProjectCard = ({ repo }) => {
+  const handlePointerMove = (event) => {
+    if (event.pointerType === "touch") return;
 
-      {repo.createdAt && (
-        <span className="project-date">
-          {repo.createdAt}
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+    event.currentTarget.style.setProperty("--tilt-x", `${-y * 5}deg`);
+    event.currentTarget.style.setProperty("--tilt-y", `${x * 6}deg`);
+  };
+
+  const resetTilt = (event) => {
+    event.currentTarget.style.setProperty("--tilt-x", "0deg");
+    event.currentTarget.style.setProperty("--tilt-y", "0deg");
+  };
+
+  return (
+    <article
+      className="project-card scroll-reveal"
+      onPointerMove={handlePointerMove}
+      onPointerLeave={resetTilt}
+    >
+      <div className="project-card-top">
+        <span className="project-category">
+          {repo.category || "Project"}
         </span>
-      )}
-    </div>
 
-    <div
-      className="project-icon"
-      aria-hidden="true"
-    >
-      <svg
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.8}
-          d="M4 6.75A1.75 1.75 0 015.75 5h4.08c.46 0 .9.18 1.23.51L12.55 7h5.7A1.75 1.75 0 0120 8.75v8.5A1.75 1.75 0 0118.25 19H5.75A1.75 1.75 0 014 17.25V6.75z"
-        />
-      </svg>
-    </div>
-
-    <h3>
-      {repo.name}
-    </h3>
-
-    <p className="project-description">
-      {repo.description}
-    </p>
-
-    {!!repo.languages?.length && (
-      <div
-        className="project-stack"
-        aria-label={`${repo.name} technologies`}
-      >
-        {repo.languages.map((language) => (
-          <span key={`${repo.id}-${language.name}`}>
-            {language.name}
+        {repo.createdAt && (
+          <span className="project-date">
+            {repo.createdAt}
           </span>
-        ))}
+        )}
       </div>
-    )}
 
-    <a
-      className="project-link"
-      href={repo.url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      View on GitHub
-      <span aria-hidden="true">↗</span>
-    </a>
-  </article>
-);
+      <div
+        className="project-icon"
+        aria-hidden="true"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.8}
+            d="M4 6.75A1.75 1.75 0 015.75 5h4.08c.46 0 .9.18 1.23.51L12.55 7h5.7A1.75 1.75 0 0120 8.75v8.5A1.75 1.75 0 0118.25 19H5.75A1.75 1.75 0 014 17.25V6.75z"
+          />
+        </svg>
+      </div>
+
+      <h3>
+        {repo.name}
+      </h3>
+
+      <p className="project-description">
+        {repo.description}
+      </p>
+
+      {!!repo.languages?.length && (
+        <div
+          className="project-stack"
+          aria-label={`${repo.name} technologies`}
+        >
+          {repo.languages.map((language) => (
+            <span key={`${repo.id}-${language.name}`}>
+              {language.name}
+            </span>
+          ))}
+        </div>
+      )}
+
+      <a
+        className="project-link"
+        href={repo.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View on GitHub
+        <span aria-hidden="true">↗</span>
+      </a>
+    </article>
+  );
+};
 
 const Projects = () => {
+  useScrollReveal();
+
   const projects = ProjectsData?.data || [];
 
   return (
@@ -95,7 +120,7 @@ const Projects = () => {
           aria-labelledby="featured-projects-title"
         >
           <div className="projects-heading-row">
-            <h1 id="featured-projects-title">
+            <h1 id="featured-projects-title" className="scroll-reveal">
               Featured Projects
             </h1>
 
@@ -127,7 +152,7 @@ const Projects = () => {
                   aria-labelledby={`${group.id}-title`}
                 >
                   <h2
-                    className="project-group-title"
+                    className="project-group-title scroll-reveal"
                     id={`${group.id}-title`}
                   >
                     {group.title}

@@ -14,11 +14,12 @@ import {
   skills,
   mlResearch,
 } from "../../data/portfolio";
+import useScrollReveal from "../../hooks/useScrollReveal";
 
 import "./Home.scss";
 
 const SkillCard = ({ item }) => (
-  <article className="skill-card">
+  <article className="skill-card scroll-reveal">
     <h3>{item.title}</h3>
 
     <div
@@ -43,6 +44,8 @@ const SkillCard = ({ item }) => (
 );
 
 const Home = () => {
+  useScrollReveal();
+
   const {
     name,
     careerTitle,
@@ -54,6 +57,22 @@ const Home = () => {
     linkedin,
   } = homePageData;
 
+  const handleProfilePointerMove = (event) => {
+    if (event.pointerType === "touch") return;
+
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+    event.currentTarget.style.setProperty("--tilt-x", `${-y * 7}deg`);
+    event.currentTarget.style.setProperty("--tilt-y", `${x * 9}deg`);
+  };
+
+  const resetProfileTilt = (event) => {
+    event.currentTarget.style.setProperty("--tilt-x", "0deg");
+    event.currentTarget.style.setProperty("--tilt-y", "0deg");
+  };
+
   return (
     <main>
       <section
@@ -61,7 +80,7 @@ const Home = () => {
         aria-labelledby="greeting-title"
       >
         <div className="greeting-content">
-          <div className="greeting-text-section">
+          <div className="greeting-text-section hero-enter">
             <p className="intro-label">
               Hello, I’m
             </p>
@@ -126,7 +145,21 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="greeting-image-section">
+          <div
+            className="greeting-image-section hero-enter"
+            onPointerMove={handleProfilePointerMove}
+            onPointerLeave={resetProfileTilt}
+          >
+            <span className="hero-orb" aria-hidden="true" />
+            <span className="hero-orbit" aria-hidden="true" />
+            <div className="hero-cube" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+            </div>
             <div className="profile-card">
               <div className="profile-image-wrap">
                 <img
@@ -159,7 +192,7 @@ const Home = () => {
       >
         <div className="skills-shell">
           <div className="skills-heading">
-            <h2 id="skills-title">
+            <h2 id="skills-title" className="scroll-reveal">
               Technical Expertise
             </h2>
           </div>
